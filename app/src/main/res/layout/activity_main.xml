@@ -23,7 +23,7 @@
         android:layout_width="240dp"
         android:layout_height="49dp"
         android:text="Play"
-        android:background = "@color/Buttons"
+        style = "@style/Main_Menu_Buttons"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +36,7 @@
         android:layout_height="51dp"
         android:layout_marginTop="24dp"
         android:text="Customize"
-        android:background = "@color/Buttons"
+        style = "@style/Main_Menu_Buttons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +48,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
         android:text="Directions"
-        android:background = "@color/Buttons"
+        style = "@style/Main_Menu_Buttons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
@@ -59,7 +59,7 @@
         android:layout_height="47dp"
         android:layout_marginTop="24dp"
         android:text="Credits"
-        android:background = "@color/Buttons"
+        style = "@style/Main_Menu_Buttons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
@@ -93,7 +93,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.46"
-        app:srcCompat="@drawable/T31" />
+        app:srcCompat="@drawable/t3_logo" />
 
 
 </android.support.constraint.ConstraintLayout>
