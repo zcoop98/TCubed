@@ -1,7 +1,12 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation">
     <string name="app_name">TCubed</string>
-    <string name="ThemesMenu.themes" tools:ignore="ExtraTranslation">Themes</string>
-    <string name="ThemesMenu.button.presets" tools:ignore="ExtraTranslation">Presets</string>
-    <string name="ThemesMenu.button.backgrounds" tools:ignore="ExtraTranslation">Backgrounds</string>
-    <string name="ThemesMenu.button.icons" tools:ignore="ExtraTranslation">Icons</string>
+    <string name="ThemesMenu.textView.themes">Themes</string>
+    <string name="ThemesMenu.button.presets">Presets</string>
+    <string name="ThemesMenu.button.backgrounds">Backgrounds</string>
+    <string name="ThemesMenu.button.icons">Icons</string>
+    <string name="MainActivity.button.play">Play</string>
+    <string name="MainActivity.button.customize">Customize</string>
+    <string name="MainActivity.button.directions">Directions</string>
+    <string name="MainActivity.button.credits">Credits</string>
+    <string name="MainActivity.image.logo.description">A picture of a T with a 3 in its trunk</string>
 </resources>

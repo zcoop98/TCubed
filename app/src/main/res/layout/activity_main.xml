@@ -22,7 +22,7 @@
         android:id="@+id/button"
         android:layout_width="240dp"
         android:layout_height="49dp"
-        android:text="Play"
+        android:text="@string/MainActivity.button.play"
         android:background = "@color/Buttons"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +35,7 @@
         android:layout_width="241dp"
         android:layout_height="51dp"
         android:layout_marginTop="24dp"
-        android:text="Customize"
+        android:text="@string/MainActivity.button.customize"
         android:background = "@color/Buttons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
@@ -47,7 +47,7 @@
         android:layout_width="239dp"
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
-        android:text="Directions"
+        android:text="@string/MainActivity.button.directions"
         android:background = "@color/Buttons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +58,7 @@
         android:layout_width="238dp"
         android:layout_height="47dp"
         android:layout_marginTop="24dp"
-        android:text="Credits"
+        android:text="@string/MainActivity.button.credits"
         android:background = "@color/Buttons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,14 +86,14 @@
         android:layout_height="229dp"
         android:layout_marginBottom="20dp"
         android:layout_marginTop="16dp"
-        android:contentDescription="A picture of a T with a 3 in its trunk"
+        android:contentDescription="@string/MainActivity.image.logo.description"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.46"
-        app:srcCompat="@drawable/T31" />
+        app:srcCompat="@drawable/t3_logo" />
 
 
 </android.support.constraint.ConstraintLayout>
