@@ -9,4 +9,5 @@
     <string name="MainActivity.button.directions">Directions</string>
     <string name="MainActivity.button.credits">Credits</string>
     <string name="MainActivity.image.logo.description">A picture of a T with a 3 in its trunk</string>
+    <string name="MainActivity.imageButton.cog.description">Simple 2D depiction of a cog or gear</string>
 </resources>

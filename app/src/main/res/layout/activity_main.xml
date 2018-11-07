@@ -67,14 +67,15 @@
         android:id="@+id/imageButton"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         android:background="@color/Background"
+        android:contentDescription="@string/MainActivity.imageButton.cog.description"
         android:scaleType="fitXY"
         android:tint="@color/Buttons"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.984"
@@ -82,16 +83,16 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="374dp"
-        android:layout_height="229dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:layout_marginTop="16dp"
-        android:contentDescription="An image of a T with a 3 in its trunk"
+        android:contentDescription="@string/MainActivity.image.logo.description"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.253"
+        app:layout_constraintVertical_bias="0.188"
         app:srcCompat="@drawable/t3_logo" />
 
     <android.support.constraint.Guideline
