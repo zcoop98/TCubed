@@ -16,6 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".PlayMenu" />
+        <activity android:name=".GameBoard" />
+        <activity android:name=".ThemesMenu" />
+        <activity android:name=".DirectionsMenu" />
+        <activity android:name=".Credits"></activity>
     </application>
 
 </manifest>
