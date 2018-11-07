@@ -20,10 +20,10 @@
 
     <Button
         android:id="@+id/button"
-        style="@style/Main_Menu_Buttons"
         android:layout_width="240dp"
         android:layout_height="49dp"
-        android:text="@string/MainActivity.button.play"
+        android:text="Play"
+        style = "@style/Main_Menu_Buttons"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,11 +32,11 @@
 
     <Button
         android:id="@+id/button2"
-        style="@style/Main_Menu_Buttons"
         android:layout_width="241dp"
         android:layout_height="51dp"
         android:layout_marginTop="24dp"
-        android:text="@string/MainActivity.button.customize"
+        android:text="Customize"
+        style = "@style/Main_Menu_Buttons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,22 +44,22 @@
 
     <Button
         android:id="@+id/button3"
-        style="@style/Main_Menu_Buttons"
         android:layout_width="239dp"
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
-        android:text="@string/MainActivity.button.directions"
+        android:text="Directions"
+        style = "@style/Main_Menu_Buttons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <Button
         android:id="@+id/button4"
-        style="@style/Main_Menu_Buttons"
         android:layout_width="238dp"
         android:layout_height="47dp"
         android:layout_marginTop="24dp"
-        android:text="@string/MainActivity.button.credits"
+        android:text="Credits"
+        style = "@style/Main_Menu_Buttons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
