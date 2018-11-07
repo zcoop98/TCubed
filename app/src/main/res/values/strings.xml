@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation">
     <string name="app_name">TCubed</string>
-    <string name="ThemesMenu.textView.themes">Themes</string>
-    <string name="ThemesMenu.button.presets">Presets</string>
+    <string name="ThemesMenu.textView.themes">Customize</string>
+    <string name="ThemesMenu.button.presets">Themes</string>
     <string name="ThemesMenu.button.backgrounds">Backgrounds</string>
     <string name="ThemesMenu.button.icons">Icons</string>
     <string name="MainActivity.button.play">Play</string>
