@@ -12,4 +12,9 @@
         android:background="@color/Background">
 
     </FrameLayout>
+
+    <com.example.zachl.tcubed.BoardView
+        android:id="@+id/boardView"
+        android:layout_width="388dp"
+        android:layout_height="523dp" />
 </android.support.constraint.ConstraintLayout>
