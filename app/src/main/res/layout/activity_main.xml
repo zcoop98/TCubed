@@ -20,48 +20,47 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="240dp"
+        style="@style/Main_Menu_Buttons"
+        android:layout_width="0dp"
         android:layout_height="50dp"
-        android:text="Play"
-        style = "@style/Main_Menu_Buttons"
+        android:text="@string/MainActivity.button.play"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.39" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="240dp"
+        style="@style/Main_Menu_Buttons"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
-        android:text="Customize"
-        style = "@style/Main_Menu_Buttons"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/MainActivity.button.customize"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="240dp"
+        style="@style/Main_Menu_Buttons"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
-        android:text="Directions"
-        style = "@style/Main_Menu_Buttons"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/MainActivity.button.directions"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <Button
         android:id="@+id/button4"
         style="@style/Main_Menu_Buttons"
-        android:layout_width="240dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
-        android:text="Credits"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/MainActivity.button.credits"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
 
     <ImageButton
@@ -94,6 +93,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.253"
         app:srcCompat="@drawable/t3_logo" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".18" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".82" />
 
 
 </android.support.constraint.ConstraintLayout>
