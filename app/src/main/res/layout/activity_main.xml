@@ -20,10 +20,10 @@
 
     <Button
         android:id="@+id/button"
+        style="@style/Main_Menu_Buttons"
         android:layout_width="240dp"
         android:layout_height="49dp"
-        android:text="Play"
-        style = "@style/Main_Menu_Buttons"
+        android:text="@string/MainActivity.button.play"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,11 +32,11 @@
 
     <Button
         android:id="@+id/button2"
+        style="@style/Main_Menu_Buttons"
         android:layout_width="241dp"
         android:layout_height="51dp"
         android:layout_marginTop="24dp"
-        android:text="Customize"
-        style = "@style/Main_Menu_Buttons"
+        android:text="@string/MainActivity.button.customize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,22 +44,22 @@
 
     <Button
         android:id="@+id/button3"
+        style="@style/Main_Menu_Buttons"
         android:layout_width="239dp"
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
-        android:text="Directions"
-        style = "@style/Main_Menu_Buttons"
+        android:text="@string/MainActivity.button.directions"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <Button
         android:id="@+id/button4"
+        style="@style/Main_Menu_Buttons"
         android:layout_width="238dp"
         android:layout_height="47dp"
         android:layout_marginTop="24dp"
-        android:text="Credits"
-        style = "@style/Main_Menu_Buttons"
+        android:text="@string/MainActivity.button.credits"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
@@ -84,9 +84,9 @@
         android:id="@+id/imageView2"
         android:layout_width="374dp"
         android:layout_height="229dp"
-        android:layout_marginBottom="20dp"
         android:layout_marginTop="16dp"
-        android:contentDescription="A picture of a T with a 3 in its trunk"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="@string/MainActivity.image.logo.description"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
