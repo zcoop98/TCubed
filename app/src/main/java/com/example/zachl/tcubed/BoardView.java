@@ -16,7 +16,7 @@ public class BoardView extends View {
     private static final int ELT_STROKE_WIDTH = 15;
     private int width, height, eltW, eltH;
     private Paint gridPaint, oPaint, xPaint;
-    private GameBoard gameEngine;
+    private GameEngine gameEngine;
     private MainActivity activity;
 
     public BoardView(Context context) {
@@ -38,7 +38,7 @@ public class BoardView extends View {
         activity = a;
     }
 
-    public void setGameEngine(GameBoard g) {
+    public void setGameBoard(GameEngine g) {
         gameEngine = g;
     }
 
@@ -85,7 +85,7 @@ public class BoardView extends View {
     private void drawBoard(Canvas canvas) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                drawElt(canvas, gameEngine.elt(i, j), i, j);
+                drawElt(canvas, gameEngine.getElt(i, j), i, j);
             }
         }
     }

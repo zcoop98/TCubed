@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GameBoard">
+    tools:context="com.example.zachl.tcubed.MainActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -14,7 +14,7 @@
     </FrameLayout>
 
     <com.example.zachl.tcubed.BoardView
-        android:id="@+id/boardView"
+        android:id="@+id/board"
         android:layout_width="388dp"
         android:layout_height="523dp" />
 </android.support.constraint.ConstraintLayout>
