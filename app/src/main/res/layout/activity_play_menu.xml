@@ -201,16 +201,17 @@
 
     <Button
         android:id="@+id/button9"
+        style="@style/Main_Menu_Buttons"
         android:layout_width="149dp"
         android:layout_height="68dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
-        style="@style/Main_Menu_Buttons"
+        android:onClick="play"
         android:text="Play"
+        android:textColor="@color/Text"
         app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2"
-        android:textColor="@color/Text" />
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
 </android.support.constraint.ConstraintLayout>
