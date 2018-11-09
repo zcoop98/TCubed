@@ -7,20 +7,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import static com.example.zachl.tcubed.R.id.GameBoard;
+import static com.example.zachl.tcubed.R.id.board;
 
 public class MainActivity extends AppCompatActivity {
 
     private BoardView boardView;
-    private GameBoard gameEngine;
+    private GameEngine gameEngine;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        boardView = (BoardView) findViewById(GameBoard);
-        gameEngine = new GameBoard();
-        boardView.setGameEngine(gameEngine);
+        setContentView(R.layout.activity_game_board);
+        boardView = (BoardView) findViewById(board);
+        gameEngine = new GameEngine();
+        boardView.setGameBoard(gameEngine);
         boardView.setMainActivity(this);
     }
 
