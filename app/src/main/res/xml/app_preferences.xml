@@ -23,3 +23,11 @@
     </android.support.v7.preference.PreferenceCategory>
 
 </android.support.v7.preference.PreferenceScreen>
+
+<!--
+Links of note:
+https://medium.com/@JakobUlbrich/building-a-settings-screen-for-android-part-1-5959aa49337c
+https://stackoverflow.com/questions/21329132/android-custom-dropdown-popup-menu
+https://www.androidhive.info/2017/07/android-implementing-preferences-settings-screen/
+https://developer.android.com/reference/android/support/v7/preference/PreferenceFragmentCompat
+-->
