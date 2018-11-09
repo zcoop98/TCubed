@@ -1,6 +1,7 @@
 package com.example.zachl.tcubed;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -60,22 +61,26 @@ public class MainActivity extends AppCompatActivity {
 
     // Intent for Play Button
     public void playmenu(View view) {
-        // Do something in response to button
+        Intent play_menu = new Intent(this, PlayMenu.class);
+        startActivity(play_menu);
     }
 
     // Intent for Customize Button
     public void themesMenu(View view) {
-        // Do something in response to button
+        Intent themes_menu = new Intent (this, ThemesMenu.class);
+        startActivity(themes_menu);
     }
 
     // Intent for Directions Button
     public void directionsMenu(View view) {
-        // Do something in response to button
+        Intent directions_menu = new Intent(this, DirectionsMenu.class);
+        startActivity(directions_menu);
     }
 
     // Intent for Credits Button
     public void credits(View view) {
-        // Do something in response to button
+        Intent credits_page = new Intent(this, Credits.class);
+        startActivity(credits_page);
     }
 
     // Intent for main menu settings
