@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Intent for Play Button
-    public void playmenu(View view) {
+    public void playMenu(View view) {
         Intent play_menu = new Intent(this, PlayMenu.class);
         startActivity(play_menu);
     }

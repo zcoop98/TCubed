@@ -10,5 +10,6 @@
     <string name="MainActivity.button.credits">Credits</string>
     <string name="MainActivity.image.logo.description">A picture of a T with a 3 in its trunk</string>
     <string name="MainActivity.imageButton.cog.description">Simple 2D depiction of a cog or gear</string>
-    <string name="DirectionsMenu.directions">Directions</string>
+    <string name="DirectionsMenu.title">Directions</string>
+    <string name="DirectionsMenu.description">This is a simple tic tac toe game. Get three of your icons in a row to win.</string>
 </resources>

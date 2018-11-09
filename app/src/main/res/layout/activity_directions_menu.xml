@@ -23,7 +23,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif"
-        android:text="@string/DirectionsMenu.directions"
+        android:text="@string/DirectionsMenu.title"
+        android:textColor="@color/Text"
         android:textAlignment="center"
         android:textSize="48sp"
         android:typeface="normal"
@@ -60,7 +61,7 @@
                 android:id="@+id/textView32"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="[Directions Text goes here]"
+                android:text="@string/DirectionsMenu.description"
                 android:textSize="18sp" />
         </LinearLayout>
     </ScrollView>
