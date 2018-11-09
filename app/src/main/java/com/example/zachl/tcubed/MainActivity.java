@@ -6,6 +6,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import static com.example.zachl.tcubed.R.id.board;
 
@@ -57,5 +58,28 @@ public class MainActivity extends AppCompatActivity {
         boardView.invalidate();
     }
 
+    // Intent for Play Button
+    public void playmenu(View view) {
+        // Do something in response to button
+    }
 
+    // Intent for Customize Button
+    public void themesMenu(View view) {
+        // Do something in response to button
+    }
+
+    // Intent for Directions Button
+    public void directionsMenu(View view) {
+        // Do something in response to button
+    }
+
+    // Intent for Credits Button
+    public void credits(View view) {
+        // Do something in response to button
+    }
+
+    // Intent for main menu settings
+    public void mainSettings(View view) {
+        // Do something in response to button
+    }
 }
