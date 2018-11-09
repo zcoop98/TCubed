@@ -23,7 +23,7 @@
         style="@style/Main_Menu_Buttons"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:onClick="playmenu"
+        android:onClick="playMenu"
         android:text="@string/MainActivity.button.play"
         android:textColor="@color/Text"
         app:layout_constraintBottom_toBottomOf="parent"
