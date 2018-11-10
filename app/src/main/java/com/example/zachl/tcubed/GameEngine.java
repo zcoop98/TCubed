@@ -28,7 +28,12 @@ public class GameEngine {
     }
 
     public void changePlayer() {
-        currentPlayer = (currentPlayer == 'X' ? 'O' : 'X');
+        if(XOSWITCH.ischecked()){
+            currentPlayer = (currentPlayer == 'X' ? 'O' : 'X');
+        }
+        else{
+            currentPlayer = (currentPlayer == 'O' ? 'X' : 'O');
+        }
     }
 
     public char getElt(int x, int y) {
@@ -39,7 +44,6 @@ public class GameEngine {
         for (int i = 0; i  < elts.length; i++) {
             elts[i] = ' ';
         }
-
         currentPlayer = 'X';
         ended = false;
     }
@@ -84,18 +88,25 @@ public class GameEngine {
     }
 
     public char computer() {
-        if (!ended) {
-            int position = -1;
 
-            do {
-                position = RANDOM.nextInt(9);
-            } while (elts[position] != ' ');
+        if(PVPSWITCH.ischecked){
+                return checkEnd();
+            }
+        else {
 
-            elts[position] = currentPlayer;
-            changePlayer();
+            if (!ended) {
+                int position = -1;
+
+                do {
+                    position = RANDOM.nextInt(9);
+                } while (elts[position] != ' ');
+
+                elts[position] = currentPlayer;
+                changePlayer();
+            }
+
+            return checkEnd();
         }
-
-        return checkEnd();
     }
 
 }
