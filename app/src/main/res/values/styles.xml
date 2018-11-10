@@ -10,3 +10,11 @@
     </style>
 
 </resources>
+
+<!--
+Links of note:
+https://stackoverflow.com/questions/4252794/multiple-style-values-inside-a-view
+Styles and Themes documentation: https://developer.android.com/guide/topics/ui/look-and-feel/themes
+Switching app theme programmatically: https://stackoverflow.com/questions/4663752/switching-application-wide-theme-programmatically
+Changing app theme at runtime: https://android.jlelse.eu/android-changing-app-theme-at-runtime-ab17d3eb93cc
+-->

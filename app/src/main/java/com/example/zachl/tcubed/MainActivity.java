@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_board);
-        boardView = (BoardView) findViewById(board);
+        boardView = findViewById(board);
         gameEngine = new GameEngine();
         boardView.setGameBoard(gameEngine);
         boardView.setMainActivity(this);

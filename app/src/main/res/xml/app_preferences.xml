@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.preference.PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v7.preference.PreferenceCategory
+        android:title="Category 1">
+
+        <android.support.v7.preference.CheckBoxPreference
+            android:key="muteKey"
+            android:title="Mute"
+            android:summary="Turn sound on or off"
+            android:defaultValue="true"/>
+
+        <!-- Is this necessary? If app has useful text and icons already, CB mode is redundant -->
+        <android.support.v7.preference.CheckBoxPreference
+            android:key="colorBlindKey"
+            android:title="Color Blind Mode"
+            android:summary="Turn color blind mode on or off"
+            android:defaultValue="true"/>
+
+        <!-- Add rumble on/off maybe?-->
+
+    </android.support.v7.preference.PreferenceCategory>
+
+</android.support.v7.preference.PreferenceScreen>
+
+<!--
+Links of note:
+https://medium.com/@JakobUlbrich/building-a-settings-screen-for-android-part-1-5959aa49337c
+https://stackoverflow.com/questions/21329132/android-custom-dropdown-popup-menu
+https://www.androidhive.info/2017/07/android-implementing-preferences-settings-screen/
+https://developer.android.com/reference/android/support/v7/preference/PreferenceFragmentCompat
+-->
