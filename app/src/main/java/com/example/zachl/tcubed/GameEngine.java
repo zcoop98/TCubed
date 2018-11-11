@@ -1,16 +1,24 @@
 package com.example.zachl.tcubed;
 
+import android.content.Intent;
 import java.util.Random;
 
+import static android.app.PendingIntent.getActivity;
+
 public class GameEngine {
+
 
     private static final Random RANDOM = new Random();
     private char[] elts;
     private char currentPlayer;
     private boolean ended;
+    private boolean playerVCPU;
+    private boolean xGoesFirst;
 
-    public GameEngine() {
+    public GameEngine(boolean playerVCPUinc, boolean xGoesFirstinc) {
         elts = new char[9];
+        playerVCPU = playerVCPUinc;
+        xGoesFirst = xGoesFirstinc;
         newGame();
     }
 
@@ -28,7 +36,7 @@ public class GameEngine {
     }
 
     public void changePlayer() {
-        if(XOSWITCH.ischecked()){
+        if(xGoesFirst == true){
             currentPlayer = (currentPlayer == 'X' ? 'O' : 'X');
         }
         else{
@@ -89,10 +97,7 @@ public class GameEngine {
 
     public char computer() {
 
-        if(PVPSWITCH.ischecked){
-                return checkEnd();
-            }
-        else {
+        if (playerVCPU == true) {
 
             if (!ended) {
                 int position = -1;
@@ -105,6 +110,9 @@ public class GameEngine {
                 changePlayer();
             }
 
+            return checkEnd();
+        }
+        else {
             return checkEnd();
         }
     }

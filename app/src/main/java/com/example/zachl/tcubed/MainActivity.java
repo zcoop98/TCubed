@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_board);
         boardView = findViewById(board);
-        gameEngine = new GameEngine();
         boardView.setGameBoard(gameEngine);
         boardView.setMainActivity(this);
     }
