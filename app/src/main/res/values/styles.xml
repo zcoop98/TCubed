@@ -7,6 +7,7 @@
         <item name="android:padding">10dp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:gravity">center</item>
+        <item name="android:backgroundTint">@color/accent_material_light_1</item>
     </style>
 
     <style name="T3_Theme" parent="Theme.AppCompat.Light.NoActionBar" >
@@ -18,6 +19,10 @@
         <item name="android:windowActionBar">false</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:textColorPrimaryInverse">@color/Text</item>
+        <item name="android:textColorPrimary">@color/Text</item>
+        <item name="android:textColorSecondary">@color/Text</item>
+        <item name="android:textColorSecondaryInverse">@color/Text</item>
+        <item name="colorPrimaryDark">@color/Text</item>
     </style>
 
 </resources>

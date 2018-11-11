@@ -9,13 +9,11 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textColor="@color/Text"
         android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/Frame"
         android:fontFamily="sans-serif"
         android:text="Credits"
         android:textAlignment="center"
@@ -23,8 +21,10 @@
         android:typeface="normal"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.838" />
 
     <ImageButton
         android:id="@+id/imageButton2"
@@ -49,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="114dp" />
+        app:layout_constraintGuide_begin="167dp" />
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -75,13 +75,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="[Placeholder credits name]"
-                android:textColor="@color/Text"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
-                android:textColor="@color/Text"
                 android:layout_height="match_parent"
                 android:text="[Placeholder credits name]"
                 android:textSize="18sp" />
@@ -89,7 +87,6 @@
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="match_parent"
-                android:textColor="@color/Text"
                 android:layout_height="match_parent"
                 android:text="[Placeholder credits name]"
                 android:textSize="18sp" />
@@ -97,7 +94,6 @@
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
-                android:textColor="@color/Text"
                 android:layout_height="match_parent"
                 android:text="[Placeholder credits name]"
                 android:textSize="18sp" />
@@ -105,7 +101,6 @@
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="match_parent"
-                android:textColor="@color/Text"
                 android:layout_height="match_parent"
                 android:text="[Placeholder credits name]"
                 android:textSize="18sp" />
@@ -113,7 +108,6 @@
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
-                android:textColor="@color/Text"
                 android:layout_height="match_parent"
                 android:text="[Placeholder credits name]"
                 android:textSize="18sp" />
@@ -122,14 +116,12 @@
                 android:id="@+id/textView9"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColor="@color/Text"
                 android:text="[Placeholder credits name]"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textView10"
                 android:layout_width="match_parent"
-                android:textColor="@color/Text"
                 android:layout_height="match_parent"
                 android:text="[Placeholder credits name]"
                 android:textSize="18sp" />
@@ -137,7 +129,6 @@
             <TextView
                 android:id="@+id/textView11"
                 android:layout_width="match_parent"
-                android:textColor="@color/Text"
                 android:layout_height="match_parent"
                 android:text="[Placeholder credits name]"
                 android:textSize="18sp" />
@@ -145,7 +136,6 @@
             <TextView
                 android:id="@+id/textView12"
                 android:layout_width="match_parent"
-                android:textColor="@color/Text"
                 android:layout_height="match_parent"
                 android:text="[Placeholder credits name]"
                 android:textSize="18sp" />
@@ -154,14 +144,12 @@
                 android:id="@+id/textView13"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColor="@color/Text"
                 android:text="[Placeholder credits name]"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textView14"
                 android:layout_width="match_parent"
-                android:textColor="@color/Text"
                 android:layout_height="match_parent"
                 android:text="[Placeholder credits name]"
                 android:textSize="18sp" />
@@ -170,14 +158,12 @@
                 android:id="@+id/textView15"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColor="@color/Text"
                 android:text="[Placeholder credits name]"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textView16"
                 android:layout_width="match_parent"
-                android:textColor="@color/Text"
                 android:layout_height="match_parent"
                 android:text="[Placeholder credits name]"
                 android:textSize="18sp" />
@@ -185,7 +171,6 @@
             <TextView
                 android:id="@+id/textView17"
                 android:layout_width="match_parent"
-                android:textColor="@color/Text"
                 android:layout_height="match_parent"
                 android:text="[Placeholder credits name]"
                 android:textSize="18sp" />
@@ -193,7 +178,6 @@
             <TextView
                 android:id="@+id/textView18"
                 android:layout_width="match_parent"
-                android:textColor="@color/Text"
                 android:layout_height="match_parent"
                 android:text="[Placeholder credits name]"
                 android:textSize="18sp" />
@@ -202,14 +186,12 @@
                 android:id="@+id/textView19"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColor="@color/Text"
                 android:text="[Placeholder credits name]"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textView20"
                 android:layout_width="match_parent"
-                android:textColor="@color/Text"
                 android:layout_height="match_parent"
                 android:text="[Placeholder credits name]"
                 android:textSize="18sp" />
@@ -218,14 +200,12 @@
                 android:id="@+id/textView21"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColor="@color/Text"
                 android:text="[Placeholder credits name]"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textView22"
                 android:layout_width="match_parent"
-                android:textColor="@color/Text"
                 android:layout_height="match_parent"
                 android:text="[Placeholder credits name]"
                 android:textSize="18sp" />
@@ -233,7 +213,6 @@
             <TextView
                 android:id="@+id/textView23"
                 android:layout_width="match_parent"
-                android:textColor="@color/Text"
                 android:layout_height="match_parent"
                 android:text="[Placeholder credits name]"
                 android:textSize="18sp" />
@@ -241,7 +220,6 @@
             <TextView
                 android:id="@+id/textView24"
                 android:layout_width="match_parent"
-                android:textColor="@color/Text"
                 android:layout_height="match_parent"
                 android:text="[Placeholder credits name]"
                 android:textSize="18sp" />
@@ -249,7 +227,6 @@
             <TextView
                 android:id="@+id/textView25"
                 android:layout_width="match_parent"
-                android:textColor="@color/Text"
                 android:layout_height="match_parent"
                 android:text="[Placeholder credits name]"
                 android:textSize="18sp" />
@@ -257,7 +234,6 @@
             <TextView
                 android:id="@+id/textView26"
                 android:layout_width="match_parent"
-                android:textColor="@color/Text"
                 android:layout_height="match_parent"
                 android:text="[Placeholder credits name]"
                 android:textSize="18sp" />
@@ -265,7 +241,6 @@
             <TextView
                 android:id="@+id/textView27"
                 android:layout_width="match_parent"
-                android:textColor="@color/Text"
                 android:layout_height="match_parent"
                 android:text="[Placeholder credits name]"
                 android:textSize="18sp" />
@@ -273,7 +248,6 @@
             <TextView
                 android:id="@+id/textView28"
                 android:layout_width="match_parent"
-                android:textColor="@color/Text"
                 android:layout_height="match_parent"
                 android:text="[Placeholder credits name]"
                 android:textSize="18sp" />
@@ -281,7 +255,6 @@
             <TextView
                 android:id="@+id/textView29"
                 android:layout_width="match_parent"
-                android:textColor="@color/Text"
                 android:layout_height="match_parent"
                 android:text="[Placeholder credits name]"
                 android:textSize="18sp" />

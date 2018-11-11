@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="Background">#94c3dc</color>
-    <color name="Buttons">#0a80c6</color>
-    <color name="Text">#000000</color>
-    <color name="accent_material_light_1">#fff200</color>
+    <color name="Background">#847996</color>
+    <color name="Buttons">#e0f2e9</color>
+    <color name="Text">#1a090d</color>
+    <color name="accent_material_light_1">#c3d2d5</color>
+    <color name="Frame">#e9b8b3</color>
 </resources>
