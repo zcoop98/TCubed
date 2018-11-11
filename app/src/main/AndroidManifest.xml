@@ -24,6 +24,8 @@
             android:theme="@style/T3_Theme"/>
         <activity android:name=".Credits"
             android:theme="@style/T3_Theme"/>
+        <activity android:name=".BoardView"
+            android:theme="@style/T3_Theme"/>
 
     </application>
 
