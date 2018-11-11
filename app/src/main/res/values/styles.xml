@@ -12,6 +12,8 @@
     <style name="T3_Theme" parent="Theme.AppCompat.Light.NoActionBar" >
         <item name="colorAccent">@color/accent_material_light_1</item>
         <item name="android:windowBackground">@color/Background</item>
+        <item name="colorPrimary">@color/Background</item>
+        <item name="android:colorBackground">@color/Background</item>
     </style>
 
 </resources>
