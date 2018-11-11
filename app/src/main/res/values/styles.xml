@@ -19,6 +19,8 @@
         <item name="android:windowFullscreen">true</item>
         <item name="android:textColorPrimaryInverse">@color/Text</item>
         <item name="android:textColorPrimary">@color/Text</item>
+        <item name="android:textColorSecondary">@color/Text</item>
+        <item name="android:textColorSecondaryInverse">@color/Text</item>
     </style>
 
 </resources>
