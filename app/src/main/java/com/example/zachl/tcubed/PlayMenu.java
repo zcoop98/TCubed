@@ -14,7 +14,6 @@ public class PlayMenu extends AppCompatActivity {
     public static final String PVPSWITCH = "com.zachl.tcubed.PVPSWITCH";
     public static final String XOSWITCH = "com.zachl.tcubed.XOSWITCH";
 
-    private BoardView boardView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +23,7 @@ public class PlayMenu extends AppCompatActivity {
 
     // Intent for play button
     public void play (View view) {
-       Intent game_board = new Intent(this, BoardView.class);
+       Intent game_board = new Intent(this, GameBoard.class);
 
        EditText editText = (EditText) findViewById(R.id.editText);
        EditText editText2 = (EditText) findViewById(R.id.editText2);
@@ -38,10 +37,9 @@ public class PlayMenu extends AppCompatActivity {
 
        game_board.putExtra(XNAME, player1Name);
        game_board.putExtra(ONAME, player2Name);
+       game_board.putExtra(PVPSWITCH, playerVCPU);
+       game_board.putExtra(XOSWITCH, xGoesFirst);
 
-       GameEngine newGame = new GameEngine(playerVCPU, xGoesFirst);
-
-       boardView.setGameBoard(newGame);
        startActivity(game_board);
     }
 

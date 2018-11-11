@@ -8,7 +8,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:theme="@style/T3_Theme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,17 +17,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PlayMenu"
-            android:theme="@style/T3_Theme"/>
-        <activity android:name=".ThemesMenu"
-            android:theme="@style/T3_Theme"/>
-        <activity android:name=".DirectionsMenu"
-            android:theme="@style/T3_Theme"/>
-        <activity android:name=".Credits"
-            android:theme="@style/T3_Theme"/>
-        <activity android:name=".BoardView"
-            android:theme="@style/T3_Theme"/>
-
+        <activity
+            android:name=".PlayMenu"
+            android:theme="@style/T3_Theme" />
+        <activity
+            android:name=".ThemesMenu"
+            android:theme="@style/T3_Theme" />
+        <activity
+            android:name=".DirectionsMenu"
+            android:theme="@style/T3_Theme" />
+        <activity
+            android:name=".Credits"
+            android:theme="@style/T3_Theme" />
+        <activity
+            android:name=".BoardView"
+            android:theme="@style/T3_Theme" />
+        <activity android:name=".GameBoard"></activity>
     </application>
 
 </manifest>

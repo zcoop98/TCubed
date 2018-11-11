@@ -9,6 +9,7 @@ import android.support.v4.app.DialogFragment;
 import android.support.v4.widget.DirectedAcyclicGraph;
 
 public class GameEndingFragment extends DialogFragment {
+
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState)
     {

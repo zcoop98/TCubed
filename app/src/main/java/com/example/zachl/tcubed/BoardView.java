@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -20,7 +21,6 @@ public class BoardView extends View {
     private int width, height, eltW, eltH;
     private Paint gridPaint, oPaint, xPaint;
     private GameEngine gameEngine;
-    private MainActivity activity;
 
     public BoardView(Context context) {
         super(context);
@@ -37,9 +37,6 @@ public class BoardView extends View {
         xPaint.setColor(Color.BLUE);
     }
 
-    public void setMainActivity(MainActivity a) {
-        activity = a;
-    }
 
     public void setGameBoard(GameEngine g) {
         gameEngine = g;
@@ -87,10 +84,10 @@ public class BoardView extends View {
 
     public void gameEnded(char c) {
         String msg = (c == 'T') ? "Game Ended. Tie" : "GameEnded. " + c + " win";
-
+        //TODO: End game dialog should display here
     }
 
-    private void newGame() {
+    public void newGame() {
         gameEngine.newGame();
         invalidate();
     }
