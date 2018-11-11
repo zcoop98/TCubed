@@ -35,7 +35,6 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif"
         android:text="@string/DirectionsMenu.title"
-        android:textColor="@color/Text"
         android:textAlignment="center"
         android:textSize="48sp"
         android:typeface="normal"

@@ -13,4 +13,14 @@
     <string name="DirectionsMenu.title">Directions</string>
     <string name="DirectionsMenu.description">This is a simple tic tac toe game. Get three of your icons in a row to win.</string>
     <string name="Activity_Game_Board.menu">Menu</string>
+    <string name="Activity_Play_Menu.settings">Settings</string>
+    <string name="Activity_Play_Menu.pvc"> Player vs. Computer</string>
+    <string name="Activity_Play_Menu.x_first">X First</string>
+    <string name="Activity_Play_Menu.pvp">Player vs. Player</string>
+    <string name="Activity_Play_Menu.0_first">O First</string>
+    <string name="Activity_Play_Menu.set_names">Set Names</string>
+    <string name="Activity_Play_Menu.x_player">X Player</string>
+    <string name="Activity_Play_Menu.name">Name</string>
+    <string name="Activity_Play_Menu.o_player">O Player</string>
+    <string name="Activity_Play_Menu.play">Play</string>
 </resources>
