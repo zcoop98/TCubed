@@ -6,19 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".PlayMenu">
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/Background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-    </FrameLayout>
-
     <ImageButton
         android:id="@+id/imageButton2"
         android:layout_width="50dp"
@@ -61,36 +48,30 @@
         android:id="@+id/switch2"
         android:layout_width="153dp"
         android:layout_height="75dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
         android:fontFamily="sans-serif"
         android:text="Player vs. Computer"
         android:textColor="@color/Text"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
         app:layout_constraintEnd_toStartOf="@+id/textView33"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Switch
         android:id="@+id/switch3"
         android:layout_width="144dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:fontFamily="sans-serif"
         android:text="X First"
         android:textColor="@color/Text"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.32"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switch2"
-        app:layout_constraintVertical_bias="0.028" />
+        app:layout_constraintTop_toBottomOf="@+id/switch2" />
 
     <TextView
         android:id="@+id/textView33"
@@ -222,12 +203,10 @@
         style="@style/Main_Menu_Buttons"
         android:layout_width="149dp"
         android:layout_height="68dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:onClick="play"
         android:text="Play"
         android:textColor="@color/Text"
-        app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
