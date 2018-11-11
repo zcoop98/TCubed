@@ -11,14 +11,11 @@
             android:summary="Turn sound on or off"
             android:defaultValue="true"/>
 
-        <!-- Is this necessary? If app has useful text and icons already, CB mode is redundant -->
         <android.support.v7.preference.CheckBoxPreference
-            android:key="colorBlindKey"
-            android:title="Color Blind Mode"
-            android:summary="Turn color blind mode on or off"
+            android:key="rumbleKey"
+            android:title="Rumble"
+            android:summary="Turn rumble on or off"
             android:defaultValue="true"/>
-
-        <!-- Add rumble on/off maybe?-->
 
     </android.support.v7.preference.PreferenceCategory>
 
