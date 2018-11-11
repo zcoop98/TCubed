@@ -3,4 +3,5 @@
     <color name="Background">#94c3dc</color>
     <color name="Buttons">#0a80c6</color>
     <color name="Text">#000000</color>
+    <color name="accent_material_light_1">#fff200</color>
 </resources>
