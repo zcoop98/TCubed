@@ -1,11 +1,13 @@
 package com.example.zachl.tcubed;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -68,19 +70,29 @@ public class BoardView extends View {
             invalidate();
 
             if (win != ' ') {
-                activity.gameEnded(win);
+                gameEnded(win);
             } else {
                 // computer plays ...
                 win = gameEngine.computer();
                 invalidate();
 
                 if (win != ' ') {
-                    activity.gameEnded(win);
+                    gameEnded(win);
                 }
             }
         }
 
         return super.onTouchEvent(event);
+    }
+
+    public void gameEnded(char c) {
+        String msg = (c == 'T') ? "Game Ended. Tie" : "GameEnded. " + c + " win";
+
+    }
+
+    private void newGame() {
+        gameEngine.newGame();
+        invalidate();
     }
 
     private void drawBoard(Canvas canvas) {

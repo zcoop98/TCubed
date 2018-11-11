@@ -1,9 +1,7 @@
 package com.example.zachl.tcubed;
 
-import android.content.Intent;
 import java.util.Random;
 
-import static android.app.PendingIntent.getActivity;
 
 public class GameEngine {
 
