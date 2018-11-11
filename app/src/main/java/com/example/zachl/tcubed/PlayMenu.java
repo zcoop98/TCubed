@@ -36,4 +36,10 @@ public class PlayMenu extends AppCompatActivity {
        game_engine.putExtra(ONAME, message2);
        startActivity(game_engine);
     }
+
+    // Intent for Back Button
+    public void back(View view) {
+        Intent main_menu = new Intent(this, MainActivity.class);
+        startActivity(main_menu);
+    }
 }

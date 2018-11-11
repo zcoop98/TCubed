@@ -85,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Intent for main menu settings
     public void mainSettings(View view) {
-        // Do something in response to button
+        Intent settings_fragment = new Intent(this, SettingsFragment.class);
+        startActivity(settings_fragment);
     }
 }

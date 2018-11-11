@@ -1,6 +1,7 @@
 package com.example.zachl.tcubed;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -132,6 +133,10 @@ public class BoardView extends View {
 
             canvas.drawLine(startX2, startY2, endX2, endY2, xPaint);
         }
+    }
+
+    public void menu(View view) {
+        // Do something in response to button
     }
 
 }
