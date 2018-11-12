@@ -40,7 +40,7 @@
     <string name="Activity_Play_Menu.settings">Settings</string>
     <string name="Activity_Play_Menu.pvc"> Player vs. Computer</string>
     <string name="Activity_Play_Menu.x_first">X First</string>
-    <string name="Activity_Play_Menu.pvp">Player vs. Player</string>
+    <string name="Activity_Play_Menu.pvp">Player vs.\nPlayer</string>
     <string name="Activity_Play_Menu.0_first">O First</string>
     <string name="Activity_Play_Menu.set_names">Set Names</string>
     <string name="Activity_Play_Menu.x_player">X Player</string>
