@@ -58,7 +58,7 @@
         android:contentDescription="@string/MainActivity.imageButton.cog.description"
         android:onClick="mainSettings"
         android:scaleType="fitXY"
-        android:tint="@color/Buttons"
+        android:tint="@color/Frame"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
