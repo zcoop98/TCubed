@@ -63,6 +63,8 @@ public class GameBoard extends AppCompatActivity {
     }   //Here's where all hell breaks loose
 
     public void menu(View view) {
-
+        Intent main_menu = new Intent(this, MainActivity.class);
+        main_menu.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(main_menu);
     }
 }
