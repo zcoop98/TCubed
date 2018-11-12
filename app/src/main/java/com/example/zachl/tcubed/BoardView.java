@@ -26,6 +26,7 @@ public class BoardView extends View {
 
     public BoardView(Context context) {
         super(context);
+        Log.d(TAG, "new BoardView constructed");
     }
 
     public BoardView(Context context, @Nullable AttributeSet attrs) {
@@ -37,11 +38,13 @@ public class BoardView extends View {
         oPaint.setStrokeWidth(ELT_STROKE_WIDTH);
         xPaint = new Paint(oPaint);
         xPaint.setColor(Color.BLUE);
+        Log.d(TAG, "new BoardView constructed (+attrs)");
     }
 
 
     public void setGameBoard(GameEngine g) {
         gameEngine = g;
+        Log.d(TAG, "GameEngine set in BoardView!");
     }
 
     @Override

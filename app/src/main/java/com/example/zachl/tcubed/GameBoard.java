@@ -22,7 +22,7 @@ public class GameBoard extends AppCompatActivity {
         setContentView(R.layout.activity_game_board);
 
         Log.d(TAG, "Constructing BoardView");
-        board_view = new BoardView(getApplicationContext());
+        board_view = findViewById(R.id.board);
 
         Log.d(TAG, "Constructing GameEngine");
         game_engine = new GameEngine();
@@ -36,26 +36,26 @@ public class GameBoard extends AppCompatActivity {
 
         Log.d(TAG, "onStart() Firing");
         super.onStart();
-        Log.d(TAG, "Receiving intents from PlayMenu");
+        Log.d(TAG, "Receiving intents from PlayMenu:");
         Intent intent = getIntent();
         String player1Name = intent.getStringExtra(XNAME);
         String player2Name = intent.getStringExtra(ONAME);
         boolean playerVCPU = intent.getBooleanExtra(PVPSWITCH, false);
         boolean xGoesFirst = intent.getBooleanExtra(XOSWITCH, false);
 
-        Log.d(TAG, "P1Name: " + player1Name + "\nP2Name: " + player2Name + "\nplayerVCPU = " + playerVCPU + "\nxGoesFirst = " + xGoesFirst);
+        Log.d(TAG, "*P1Name: " + player1Name + "\n*P2Name: " + player2Name + "\n*playerVCPU = " + playerVCPU + "\n*xGoesFirst = " + xGoesFirst);
+
+        TextView textView = findViewById(R.id.textView31);
+        textView.setText(player1Name);
+        TextView textView2 = findViewById(R.id.textView37);
+        textView2.setText(player2Name);
 
         game_engine.setPlayerVCPU(playerVCPU);
         game_engine.setXGoesFirst(xGoesFirst);
         game_engine.newGame();
 
         Log.d(TAG, "End onStart()");
-
-        TextView textView = findViewById(R.id.textView31);
-        textView.setText(player1Name);
-        TextView textView2 = findViewById(R.id.textView37);
-        textView2.setText(player2Name);
-    }
+    }   //Here's where all hell breaks loose
 
     public void menu(View view) {
         // Do something in response to button

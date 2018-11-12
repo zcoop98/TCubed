@@ -11,6 +11,8 @@ import android.view.View;
 
 import static com.example.zachl.tcubed.R.id.board;
 
+//Game code tutorial: https://medium.com/@ssaurel/learn-to-create-a-tic-tac-toe-game-for-android-82c7bf2369de
+
 public class MainActivity extends AppCompatActivity {
 
 
