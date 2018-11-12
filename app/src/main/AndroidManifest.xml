@@ -19,20 +19,23 @@
         </activity>
         <activity
             android:name=".PlayMenu"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/T3_Theme" />
         <activity
             android:name=".ThemesMenu"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/T3_Theme" />
         <activity
             android:name=".DirectionsMenu"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/T3_Theme" />
         <activity
             android:name=".Credits"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/T3_Theme" />
         <activity
-            android:name=".BoardView"
-            android:theme="@style/T3_Theme" />
-        <activity android:name=".GameBoard"
+            android:name=".GameBoard"
+            android:parentActivityName=".PlayMenu"
             android:theme="@style/T3_Theme"/>
         <activity android:name=".ThemesList"
             android:theme="@style/T3_Theme"/>
