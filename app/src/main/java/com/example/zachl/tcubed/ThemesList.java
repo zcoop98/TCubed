@@ -1,5 +1,6 @@
 package com.example.zachl.tcubed;
 
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +11,10 @@ public class ThemesList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_themes_list);
+    }
+
+    public void back(View view) {
+        NavUtils.navigateUpFromSameTask(this);
     }
 
     // Intent for Theme 1
