@@ -51,18 +51,23 @@
     // BackgroundsList
 
     <string name="BackgroundsList.backgrounds">Backgrounds</string>
-    <string name="BackgroundsList.example_background">Example Background</string>
+    <string name="BackgroundsList.example">Example Background</string>
 
     // IconsList
 
-    <string name="IconsList.icons">Example Icon</string>
-    <string name="IconsList.example_background">Example Background</string>
+    <string name="IconsList.icons">Icons</string>
+    <string name="IconsList.example">Example Icon</string>
 
     // ThemesList
 
     <string name="ThemesList.themes">Themes</string>
-    <string name="ThemesList.example_background">Example Theme</string>
+    <string name="ThemesList.example">Example Theme</string>
 
+    // Misc.
+
+    <string name="UpNavArrow.contentDesc">Small arrow to go up to previous menu</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Credits.credits">Credits</string>
+    <string name="Misc.placeholder">[Placeholder Text]</string>
 </resources>

@@ -11,46 +11,49 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
+        android:layout_marginBottom="8dp"
         android:background="@color/Frame"
         android:fontFamily="sans-serif"
         android:text="@string/IconsList.icons"
         android:textAlignment="center"
         android:textSize="48sp"
         android:typeface="normal"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/imageButton2"
         android:layout_width="50dp"
         android:layout_height="41dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
         android:background="@color/Background"
+        android:contentDescription="@string/UpNavArrow.contentDesc"
         android:onClick="back"
         android:scaleType="fitXY"
         android:tint="@color/Buttons"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.034"
         app:srcCompat="@drawable/back_arrow" />
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="368dp"
-        android:layout_height="431dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -62,70 +65,78 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="Icon1"
-                android:text="@string/IconsList.example_background" />
-
-            <Button
-                android:id="@+id/button21"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="Icon2"
-                android:text="@string/IconsList.example_background" />
+                android:text="@string/IconsList.example" />
 
             <Button
                 android:id="@+id/button22"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Icon3"
-                android:text="@string/IconsList.example_background" />
+                android:onClick="Icon1"
+                android:text="@string/IconsList.example" />
 
             <Button
                 android:id="@+id/button23"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Icon4"
-                android:text="@string/IconsList.example_background" />
+                android:onClick="Icon1"
+                android:text="@string/IconsList.example" />
 
             <Button
                 android:id="@+id/button24"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Icon5"
-                android:text="@string/IconsList.example_background" />
+                android:onClick="Icon1"
+                android:text="@string/IconsList.example" />
 
             <Button
                 android:id="@+id/button25"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Icon6"
-                android:text="@string/IconsList.example_background" />
+                android:onClick="Icon1"
+                android:text="@string/IconsList.example" />
 
             <Button
                 android:id="@+id/button26"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Icon7"
-                android:text="@string/IconsList.example_background" />
+                android:onClick="Icon1"
+                android:text="@string/IconsList.example" />
 
             <Button
                 android:id="@+id/button27"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Icon8"
-                android:text="@string/IconsList.example_background" />
+                android:onClick="Icon1"
+                android:text="@string/IconsList.example" />
 
             <Button
                 android:id="@+id/button28"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Icon9"
-                android:text="@string/IconsList.example_background" />
+                android:onClick="Icon1"
+                android:text="@string/IconsList.example" />
 
             <Button
                 android:id="@+id/button29"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Icon10"
-                android:text="@string/IconsList.example_background" />
+                android:onClick="Icon1"
+                android:text="@string/IconsList.example" />
+
+            <Button
+                android:id="@+id/button31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="Icon1"
+                android:text="@string/IconsList.example" />
+
+            <Button
+                android:id="@+id/button32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="Icon1"
+                android:text="@string/IconsList.example" />
+
         </LinearLayout>
     </ScrollView>
 
