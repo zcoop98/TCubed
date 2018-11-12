@@ -13,53 +13,53 @@ public class BackgroundsList extends AppCompatActivity {
         setContentView(R.layout.activity_backgrounds_list);
     }
 
-    // Intent for Theme 1
-    public void Theme1(View view) {
+    // Intent for Background 1
+    public void Background1(View view) {
 
     }
 
-    // Intent for Theme 2
-    public void Theme2(View view) {
+    // Intent for Background 2
+    public void Background2(View view) {
 
     }
 
-    // Intent for Theme 3
-    public void Theme3(View view) {
+    // Intent for Background 3
+    public void Background3(View view) {
 
     }
 
-    // Intent for Theme 4
-    public void Theme4(View view) {
+    // Intent for Background 4
+    public void Background4(View view) {
 
     }
 
-    // Intent for Theme 5
-    public void Theme5(View view) {
+    // Intent for Background 5
+    public void Background5(View view) {
 
     }
 
-    // Intent for Theme 6
-    public void Theme6(View view) {
+    // Intent for Background 6
+    public void Background6(View view) {
 
     }
 
-    // Intent for Theme 7
-    public void Theme7(View view) {
+    // Intent for Background 7
+    public void Background7(View view) {
 
     }
 
-    // Intent for Theme 8
-    public void Theme8(View view) {
+    // Intent for Background 8
+    public void Background8(View view) {
 
     }
 
-    // Intent for Theme 9
-    public void Theme9(View view) {
+    // Intent for Background 9
+    public void Background9(View view) {
 
     }
 
-    // Intent for Theme 10
-    public void Theme10(View view) {
+    // Intent for Background 10
+    public void Background10(View view) {
 
     }
 }
