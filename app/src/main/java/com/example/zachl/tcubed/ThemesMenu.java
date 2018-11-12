@@ -15,17 +15,20 @@ public class ThemesMenu extends AppCompatActivity {
 
     // Intent for backgrounds button
     public void backgrounds (View view) {
-
+        Intent backgrounds = new Intent(this, BackgroundsList.class);
+        startActivity(backgrounds);
     }
 
     // Intent for icons button
     public void icons (View view) {
-
+        Intent icons = new Intent(this, IconsList.class);
+        startActivity(icons);
     }
 
     // Intent for themes button
     public void themes (View view) {
-
+        Intent themes = new Intent(this, ThemesList.class);
+        startActivity(themes);
     }
 
     // Intent for Back Button
