@@ -1,8 +1,10 @@
 package com.example.zachl.tcubed;
 
 import android.content.Intent;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 
 public class Credits extends AppCompatActivity {
@@ -15,7 +17,6 @@ public class Credits extends AppCompatActivity {
 
     // Intent for Back Button
     public void back(View view) {
-        Intent main_menu = new Intent(this, MainActivity.class);
-        startActivity(main_menu);
+        NavUtils.navigateUpFromSameTask(this);
     }
 }
