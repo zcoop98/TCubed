@@ -27,7 +27,7 @@
 
     // Activity_Game_Board
 
-    <string name="Activity_Game_Board.menu">Menu</string>
+    <string name="Activity_Game_Board.menu">Return to Menu</string>
 
     // Activity_Play_Menu
 

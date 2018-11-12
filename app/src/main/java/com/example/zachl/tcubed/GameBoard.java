@@ -62,6 +62,6 @@ public class GameBoard extends AppCompatActivity {
     }   //Here's where all hell breaks loose
 
     public void menu(View view) {
-        // Do something in response to button
+
     }
 }
