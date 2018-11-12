@@ -1,23 +1,31 @@
 package com.example.zachl.tcubed;
 
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.Switch;
+import android.widget.TextView;
 
 import static com.example.zachl.tcubed.R.id.board;
 
 public class MainActivity extends AppCompatActivity {
-
+    Dialog myDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        myDialog = new Dialog(this);
     }
 
     // Intent for Play Button
@@ -45,8 +53,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Intent for main menu settings
-    public void mainSettings(View view) {
-        Intent settings_fragment = new Intent(this, SettingsFragment.class);
-        startActivity(settings_fragment);
+    public void mainSettings(View view) { //https://awsrh.blogspot.com/2017/10/custom-pop-up-window-with-android-studio.html
+        ImageButton imageButton;
+        myDialog.setContentView(R.layout.main_menu_popup);
+        imageButton = (ImageButton) myDialog.findViewById(R.id.imageButton);
+        imageButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                myDialog.dismiss();
+            }
+        });
+
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        myDialog.show();
     }
 }
