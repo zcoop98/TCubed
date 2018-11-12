@@ -43,4 +43,9 @@
 
     <string name="BackgroundsList.backgrounds">Backgrounds</string>
     <string name="BackgroundsList.example_background">Example Background</string>
+
+    // IconsList
+
+    <string name="IconsList.icons">Icons</string>
+    <string name="IconsList.example_background">Example Background</string>
 </resources>
