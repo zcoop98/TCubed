@@ -49,6 +49,10 @@
             android:name=".IconsList"
             android:parentActivityName=".ThemesMenu"
             android:theme="@style/T3_Theme" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

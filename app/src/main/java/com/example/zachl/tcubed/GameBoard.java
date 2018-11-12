@@ -20,6 +20,13 @@ public class GameBoard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_board);
+    }
+
+    protected void onStart()
+    {
+
+        Log.d(TAG, "onStart() Firing");
+        super.onStart();
 
         Log.d(TAG, "Constructing BoardView");
         board_view = findViewById(R.id.board);
@@ -29,13 +36,7 @@ public class GameBoard extends AppCompatActivity {
 
         Log.d(TAG,"Setting GameBoard param in BoardView");
         board_view.setGameBoard(game_engine);
-    }
 
-    protected void onStart()
-    {
-
-        Log.d(TAG, "onStart() Firing");
-        super.onStart();
         Log.d(TAG, "Receiving intents from PlayMenu:");
         Intent intent = getIntent();
         String player1Name = intent.getStringExtra(XNAME);

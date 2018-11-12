@@ -34,4 +34,6 @@
     <string name="ThemesList.themes">Themes</string>
     <string name="ThemesList.example_background">Example Theme</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="x_player_name">X Player Name</string>
+    <string name="PlayMenu.contentDesc.o_player_name">O Player Name</string>
 </resources>
