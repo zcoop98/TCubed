@@ -47,5 +47,10 @@
     // IconsList
 
     <string name="IconsList.icons">Icons</string>
-    <string name="IconsList.example_background">Example Background</string>
+    <string name="IconsList.example_background">Example Icon</string>
+
+    // ThemesList
+
+    <string name="ThemesList.themes">Themes</string>
+    <string name="ThemesList.example_background">Example Theme</string>
 </resources>

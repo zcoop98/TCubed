@@ -64,70 +64,70 @@
                 android:id="@+id/button11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Theme1"
+                android:onClick="Background1"
                 android:text="@string/BackgroundsList.example_background" />
 
             <Button
                 android:id="@+id/button12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Theme2"
+                android:onClick="Background2"
                 android:text="@string/BackgroundsList.example_background" />
 
             <Button
                 android:id="@+id/button13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Theme3"
+                android:onClick="Background3"
                 android:text="@string/BackgroundsList.example_background" />
 
             <Button
                 android:id="@+id/button14"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Theme4"
+                android:onClick="Background4"
                 android:text="@string/BackgroundsList.example_background" />
 
             <Button
                 android:id="@+id/button15"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Theme5"
+                android:onClick="Background5"
                 android:text="@string/BackgroundsList.example_background" />
 
             <Button
                 android:id="@+id/button16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Theme6"
+                android:onClick="Background6"
                 android:text="@string/BackgroundsList.example_background" />
 
             <Button
                 android:id="@+id/button17"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Theme7"
+                android:onClick="Background7"
                 android:text="@string/BackgroundsList.example_background" />
 
             <Button
                 android:id="@+id/button18"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Theme8"
+                android:onClick="Background8"
                 android:text="@string/BackgroundsList.example_background" />
 
             <Button
                 android:id="@+id/button19"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Theme9"
+                android:onClick="Background9"
                 android:text="@string/BackgroundsList.example_background" />
 
             <Button
                 android:id="@+id/button20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Theme10"
+                android:onClick="Background10"
                 android:text="@string/BackgroundsList.example_background" />
         </LinearLayout>
     </ScrollView>
