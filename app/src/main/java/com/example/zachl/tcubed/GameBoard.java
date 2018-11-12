@@ -39,7 +39,11 @@ public class GameBoard extends AppCompatActivity {
         Log.d(TAG, "Receiving intents from PlayMenu:");
         Intent intent = getIntent();
         String player1Name = intent.getStringExtra(XNAME);
+        if (player1Name.equals(""))
+            player1Name = "X Player";
         String player2Name = intent.getStringExtra(ONAME);
+        if (player2Name.equals(""))
+            player2Name = "O Player";
         boolean playerVCPU = intent.getBooleanExtra(PVPSWITCH, false);
         boolean xGoesFirst = intent.getBooleanExtra(XOSWITCH, false);
 
