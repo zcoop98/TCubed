@@ -10,6 +10,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -21,6 +22,7 @@ public class BoardView extends View {
     private int width, height, eltW, eltH;
     private Paint gridPaint, oPaint, xPaint;
     private GameEngine gameEngine;
+    private final static String TAG = "BoardView";
 
     public BoardView(Context context) {
         super(context);
@@ -54,8 +56,11 @@ public class BoardView extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
+        Log.d(TAG, "Start onDraw()\nStart drawGrid()");
         drawGrid(canvas);
+        Log.d(TAG, "Finish drawGrid()\nStart drawBoard()");
         drawBoard(canvas);
+        Log.d(TAG, "Finish drawBoard()\nFinish onDraw()");
     }
 
     @Override
@@ -84,7 +89,15 @@ public class BoardView extends View {
 
     public void gameEnded(char c) {
         String msg = (c == 'T') ? "Game Ended. Tie" : "GameEnded. " + c + " win";
-        //TODO: End game dialog should display here
+
+        new AlertDialog.Builder(getContext()).setTitle("Tic Tac Toe").
+                setMessage(msg).
+                setOnDismissListener(new DialogInterface.OnDismissListener() {
+                    @Override
+                    public void onDismiss(DialogInterface dialogInterface) {
+                        newGame();
+                    }
+                }).show();
     }
 
     public void newGame() {
@@ -95,6 +108,7 @@ public class BoardView extends View {
     private void drawBoard(Canvas canvas) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
+                Log.d(TAG, "inner loop");
                 drawElt(canvas, gameEngine.getElt(i, j), i, j);
             }
         }
