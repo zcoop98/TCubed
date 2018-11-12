@@ -6,20 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".BoardView">
 
-    <TextView
-        android:id="@+id/editText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart = "16dp"
-        android:layout_marginEnd = "16dp"/>
-
-    <TextView
-        android:id="@+id/editText2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart = "16dp"
-        android:layout_marginEnd = "16dp"/>
-
 
     <com.example.zachl.tcubed.BoardView
         android:id="@+id/board"
@@ -39,6 +25,7 @@
         android:layout_marginEnd="4dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
+        android:onClick="main_menu"
         android:text="@string/Activity_Game_Board.menu"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="@+id/board"

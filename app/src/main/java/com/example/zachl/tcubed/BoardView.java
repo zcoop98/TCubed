@@ -161,4 +161,8 @@ public class BoardView extends View {
         }
     }
 
+    public void main_menu(View view) {
+        
+    }
+
 }
