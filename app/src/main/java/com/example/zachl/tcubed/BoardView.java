@@ -144,8 +144,4 @@ public class BoardView extends View {
         }
     }
 
-    public void menu(View view) {
-        // Do something in response to button
-    }
-
 }

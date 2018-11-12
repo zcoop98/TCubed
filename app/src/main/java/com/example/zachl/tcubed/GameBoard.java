@@ -3,6 +3,8 @@ package com.example.zachl.tcubed;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 public class GameBoard extends AppCompatActivity {
     public static final String XNAME = "com.zachl.tcubed.XNAME";
@@ -26,5 +28,14 @@ public class GameBoard extends AppCompatActivity {
 
         board_view.setGameBoard(game_engine);
         board_view.newGame();
+
+        TextView textView = findViewById(R.id.textView31);
+        textView.setText(player1Name);
+        TextView textView2 = findViewById(R.id.textView37);
+        textView2.setText(player2Name);
+    }
+
+    public void menu(View view) {
+        // Do something in response to button
     }
 }
