@@ -1,11 +1,13 @@
 package com.example.zachl.tcubed;
 
+import android.util.Log;
+
 import java.util.Random;
 
 
 public class GameEngine {
 
-
+    private static final String TAG = "GameEngine";
     private static final Random RANDOM = new Random();
     private char[] elts;
     private char currentPlayer;
@@ -13,15 +15,28 @@ public class GameEngine {
     private boolean playerVCPU;
     private boolean xGoesFirst;
 
-    public GameEngine(boolean playerVCPUinc, boolean xGoesFirstinc) {
+    public GameEngine()
+    {
         elts = new char[9];
-        playerVCPU = playerVCPUinc;
-        xGoesFirst = xGoesFirstinc;
-        newGame();
     }
 
     public boolean isEnded() {
         return ended;
+    }
+
+    public boolean getXGoesFirst()
+    {
+        return xGoesFirst;
+    }
+
+    public void setXGoesFirst(boolean xGoesFirstinc)
+    {
+        xGoesFirst = xGoesFirstinc;
+    }
+
+    public void setPlayerVCPU(boolean playerVCPUinc)
+    {
+        playerVCPU = playerVCPUinc;
     }
 
     public char play(int x, int y) {
@@ -47,11 +62,16 @@ public class GameEngine {
     }
 
     public void newGame() {
+        Log.d(TAG, "Start newGame()");
         for (int i = 0; i  < elts.length; i++) {
             elts[i] = ' ';
         }
-        currentPlayer = 'X';
+        if (xGoesFirst)
+            currentPlayer = 'X';
+        else
+            currentPlayer = 'O';
         ended = false;
+        Log.d(TAG, "End newGame()");
     }
 
     public char checkEnd() {
