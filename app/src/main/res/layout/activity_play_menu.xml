@@ -12,6 +12,7 @@
         android:layout_height="41dp"
         android:layout_marginStart="16dp"
         android:background="@color/Background"
+        android:contentDescription="@string/UpNavArrow.contentDesc"
         android:onClick="back"
         android:scaleType="fitXY"
         android:tint="@color/Buttons"
@@ -139,18 +140,16 @@
         android:textColor="@color/Text"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editText"
+        app:layout_constraintEnd_toStartOf="@+id/XPlayerEditText"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/XPlayerEditText"
         android:layout_width="200dp"
         android:layout_height="45dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
-        android:autofillHints=""
-        android:contentDescription="@string/PlayMenu.contentDesc.x_player_name"
+        android:autofillHints="Space for X Player Name"
         android:ems="10"
         android:hint="@string/Activity_Play_Menu.name"
         android:inputType="textPersonName"
@@ -160,7 +159,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/setNameSpace"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0" tools:targetApi="o"/>
 
     <TextView
         android:id="@+id/textView36"
@@ -174,17 +173,17 @@
         android:textColor="@color/Text"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editText2"
+        app:layout_constraintEnd_toStartOf="@+id/OPlayerEditText"
         app:layout_constraintTop_toBottomOf="@+id/textView35"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0" tools:targetApi="o" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/OPlayerEditText"
         android:layout_width="200dp"
         android:layout_height="45dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp"
-        android:contentDescription="@string/PlayMenu.contentDesc.o_player_name"
+        android:autofillHints="Space for O Player Name"
         android:ems="10"
         android:hint="@string/Activity_Play_Menu.name"
         android:inputType="textPersonName"
@@ -193,8 +192,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/setNameSpace"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/XPlayerEditText"
+        app:layout_constraintVertical_bias="0.0" tools:targetApi="o"/>
 
     <Button
         android:id="@+id/button9"
@@ -208,7 +207,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/OPlayerEditText" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline11"
