@@ -23,7 +23,7 @@
     // DirectionsMenu
 
     <string name="DirectionsMenu.title">Directions</string>
-    <string name="DirectionsMenu.description">This is a simple tic tac toe game. Get three of your icons in a row to win.</string>
+    <string name="DirectionsMenu.description">This is a simple tic-tac-toe game. Get three of your icons in a row to win!</string>
     <string name="DirectionsMenu.directions">Directions</string>
 
     // Activity_Play_Menu
@@ -63,11 +63,16 @@
     <string name="ThemesList.themes">Themes</string>
     <string name="ThemesList.example">Example Theme</string>
 
+    // Credits
+
+    <string name="Credits.credits">Credits</string>
+
     // Misc.
 
-    <string name="UpNavArrow.contentDesc">Small arrow to go up to previous menu</string>
+    <string name="Misc.placeholder">[Placeholder Text]</string>
+    <string name="Misc.UpNavArrow.contentDesc">Small arrow to go up to previous menu</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="Credits.credits">Credits</string>
-    <string name="Misc.placeholder">[Placeholder Text]</string>
+
 </resources>

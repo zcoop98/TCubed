@@ -31,7 +31,7 @@
         android:layout_height="41dp"
         android:layout_marginStart="16dp"
         android:background="@color/Background"
-        android:contentDescription="@string/UpNavArrow.contentDesc"
+        android:contentDescription="@string/Misc.UpNavArrow.contentDesc"
         android:onClick="back"
         android:scaleType="fitXY"
         android:tint="@color/Buttons"
