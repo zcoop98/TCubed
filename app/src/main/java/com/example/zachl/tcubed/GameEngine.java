@@ -15,19 +15,17 @@ public class GameEngine {
     private boolean playerVCPU;
     private boolean xGoesFirst;
 
+    //Constructs game engine, instantiates game board grid
     public GameEngine()
     {
         elts = new char[9];
     }
 
+    //What does this do?
     public boolean isEnded() {
         return ended;
     }
 
-    public boolean getXGoesFirst()
-    {
-        return xGoesFirst;
-    }
 
     public void setXGoesFirst(boolean xGoesFirstinc)
     {
@@ -74,6 +72,8 @@ public class GameEngine {
         Log.d(TAG, "End newGame()");
     }
 
+    // Function checks whether game is over: either a player has 3 in a row or the board is full
+    // Returns char indicating winner: X, O, or T for tie, sets 'ended' flag if game over
     public char checkEnd() {
         for (int i = 0; i < 3; i++) {
             if (getElt(i, 0) != ' ' &&
@@ -113,18 +113,19 @@ public class GameEngine {
         return 'T';
     }
 
+    // Computer plays a turn
     public char computer() {
 
-        if (playerVCPU == true) {
+        if (playerVCPU) {
 
-            if (!ended) {
-                int position = -1;
+            if (!ended) {   // If game hasn't ended
+                int position;
 
-                do {
+                do {    // Find empty spot randomly
                     position = RANDOM.nextInt(9);
                 } while (elts[position] != ' ');
 
-                elts[position] = currentPlayer;
+                elts[position] = currentPlayer; // "Play" computer choice on game board
                 changePlayer();
             }
 

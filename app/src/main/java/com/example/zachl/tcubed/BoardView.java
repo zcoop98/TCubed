@@ -38,6 +38,9 @@ public class BoardView extends View {
         oPaint.setStrokeWidth(ELT_STROKE_WIDTH);
         xPaint = new Paint(oPaint);
         xPaint.setColor(Color.BLUE);
+
+        //LayoutParams = getLayoutParams();
+
         Log.d(TAG, "new BoardView constructed (+attrs)");
     }
 
@@ -91,7 +94,7 @@ public class BoardView extends View {
     }
 
     public void gameEnded(char c) {
-        String msg = (c == 'T') ? "Game Ended. Tie" : "GameEnded. " + c + " win";
+        String msg = (c == 'T') ? "Game Ended: Tie!" : "Game Ended: " + c + " wins!";
 
         new AlertDialog.Builder(getContext()).setTitle("Tic Tac Toe").
                 setMessage(msg).
