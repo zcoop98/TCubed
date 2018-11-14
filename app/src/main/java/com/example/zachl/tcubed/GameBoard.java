@@ -50,9 +50,9 @@ public class GameBoard extends AppCompatActivity {
 
         Log.d(TAG, "*P1Name: " + player1Name + "\n*P2Name: " + player2Name + "\n*playerVCPU = " + playerVCPU + "\n*xGoesFirst = " + xGoesFirst);
 
-        TextView textView = findViewById(R.id.textView31);
+        TextView textView = findViewById(R.id.xPlayerNameView);
         textView.setText(player1Name);
-        TextView textView2 = findViewById(R.id.textView37);
+        TextView textView2 = findViewById(R.id.oPlayerNameView);
         textView2.setText(player2Name);
 
         game_engine.setPlayerVCPU(playerVCPU);

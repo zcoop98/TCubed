@@ -20,6 +20,8 @@ public class BoardView extends View {
     private static final int ELT_MARGIN = 20;
     private static final int ELT_STROKE_WIDTH = 15;
     private int width, height, eltW, eltH;
+    private int xWins = 0;
+    private int oWins = 0;
     private Paint gridPaint, oPaint, xPaint;
     private GameEngine gameEngine;
     private final static String TAG = "BoardView";
@@ -95,6 +97,10 @@ public class BoardView extends View {
 
     public void gameEnded(char c) {
         String msg = (c == 'T') ? "Game Ended: Tie!" : "Game Ended: " + c + " wins!";
+        if (c == 'X')
+            xWins++;
+        if (c == 'O')
+            oWins++;
 
         new AlertDialog.Builder(getContext()).setTitle("Tic Tac Toe").
                 setMessage(msg).
