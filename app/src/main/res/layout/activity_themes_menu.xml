@@ -29,8 +29,8 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="13dp"
-        android:onClick="backgrounds"
-        android:text="@string/ThemesMenu.button.backgrounds"
+        android:onClick="themes"
+        android:text="@string/ThemesMenu.button.presets"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="@+id/guideline5" />
@@ -70,8 +70,8 @@
         style="@style/Main_Menu_Buttons"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:onClick="themes"
-        android:text="@string/ThemesMenu.button.presets"
+        android:onClick="backgrounds"
+        android:text="@string/ThemesMenu.button.backgrounds"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline3" />
