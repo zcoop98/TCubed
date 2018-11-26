@@ -41,7 +41,6 @@ public class BoardView extends View {
         xPaint = new Paint(oPaint);
         xPaint.setColor(Color.BLUE);
 
-        //LayoutParams = getLayoutParams();
 
         Log.d(TAG, "new BoardView constructed (+attrs)");
     }
@@ -73,21 +72,24 @@ public class BoardView extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        Log.d(TAG, "TouchEvent");
         if (!gameEngine.isEnded()  &&  event.getAction() == MotionEvent.ACTION_DOWN) {
             int x = (int) (event.getX() / eltW);
             int y = (int) (event.getY() / eltH);
-            char win = gameEngine.play(x, y);
-            invalidate();
-
-            if (win != ' ') {
-                gameEnded(win);
-            } else {
-                // computer plays ...
-                win = gameEngine.computer();
+            if (gameEngine.getElt(x, y) == ' ') {
+                char win = gameEngine.play(x, y);
                 invalidate();
 
-                if (win != ' ') {
+                if (win != ' ') {   // If human wins after playing turn
                     gameEnded(win);
+                } else {
+                    // computer plays ...
+                    win = gameEngine.computer();
+                    invalidate();
+
+                    if (win != ' ') {   // If computer wins after playing turn
+                        gameEnded(win);
+                    }
                 }
             }
         }
@@ -147,13 +149,15 @@ public class BoardView extends View {
     }
 
     private void drawElt(Canvas canvas, char c, int x, int y) {
-        if (c == 'O') {
+        if (c == 'O') { //Draw a circle game piece in selected position
             float cx = (eltW * x) + eltW / 2;
             float cy = (eltH * y) + eltH / 2;
 
+            Log.d(TAG, "");
+
             canvas.drawCircle(cx, cy, Math.min(eltW, eltH) / 2 - ELT_MARGIN * 2, oPaint);
 
-        } else if (c == 'X') {
+        } else if (c == 'X') {  //Draw an X game piece in selected position
             float startX = (eltW * x) + ELT_MARGIN;
             float startY = (eltH * y) + ELT_MARGIN;
             float endX = startX + eltW - ELT_MARGIN * 2;
@@ -169,9 +173,4 @@ public class BoardView extends View {
             canvas.drawLine(startX2, startY2, endX2, endY2, xPaint);
         }
     }
-
-    public void main_menu(View view) {
-        
-    }
-
 }

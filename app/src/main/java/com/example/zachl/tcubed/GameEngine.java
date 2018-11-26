@@ -47,10 +47,10 @@ public class GameEngine {
     }
 
     public void changePlayer() {
-        if(xGoesFirst == true){
+        if(xGoesFirst) {
             currentPlayer = (currentPlayer == 'X' ? 'O' : 'X');
         }
-        else{
+        else {
             currentPlayer = (currentPlayer == 'O' ? 'X' : 'O');
         }
     }
