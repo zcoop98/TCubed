@@ -28,7 +28,7 @@
     <color name="accent_stripe8_dark_blue">#acb2ff</color>
     <color name="accent_stripe9_purple">#f6a1ff</color>
     <color name="accent_stripe10_gray">#bababa</color>
-    <color name="accent_stripe11_black">#535353</color>
+    <color name="accent_stripe11_black">#ffffff</color>
 
     <color name="halloween_theme_background">#ff8800</color>
     <color name="halloween_theme_accent_stripe">#000000</color>
