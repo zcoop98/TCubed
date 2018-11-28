@@ -3,6 +3,8 @@
     <color name="Background">#847996</color>
     <color name="Buttons">#e0f2e9</color>
     <color name="Text">#1a090d</color>
+    <color name="TextTitle">#6b5452</color>
+    <color name="TextBlack">#000000</color>
     <color name="accent_material_light_1">#c3d2d5</color>
     <color name="Frame">#e9b8b3</color>
 
