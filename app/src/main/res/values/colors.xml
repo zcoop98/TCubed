@@ -5,4 +5,13 @@
     <color name="Text">#1a090d</color>
     <color name="accent_material_light_1">#c3d2d5</color>
     <color name="Frame">#e9b8b3</color>
+    
+    <color name="background_pink">#f76dbd</color>
+    <color name="background_red">#ff0000</color>
+    <color name="background_orange">#ff8800</color>
+    <color name="background_yellow">#ffee00</color>
+    <color name="background_green">#2bff00</color>
+    <color name="background_light_blue">#00ffee</color>
+    <color name="background_dark_blue">#0004ff</color>
+    <color name="background_purple">#e100ff</color>
 </resources>
