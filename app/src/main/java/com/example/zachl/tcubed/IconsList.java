@@ -17,6 +17,8 @@ public class IconsList extends AppCompatActivity {
         NavUtils.navigateUpFromSameTask(this);
     }
 
+    //TODO: Add in links to real icons
+
     // Intent for Icon 1
     public void Icon1(View view) {
 

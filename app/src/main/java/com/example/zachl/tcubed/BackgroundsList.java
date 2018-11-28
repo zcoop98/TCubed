@@ -18,6 +18,8 @@ public class BackgroundsList extends AppCompatActivity {
         NavUtils.navigateUpFromSameTask(this);
     }
 
+    //TODO Add in links to real backgrounds
+
     // Intent for Background 1
     public void Background1(View view) {
 

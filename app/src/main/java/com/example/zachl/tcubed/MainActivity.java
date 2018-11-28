@@ -58,15 +58,17 @@ public class MainActivity extends AppCompatActivity {
     public void mainSettings(View view) { //https://awsrh.blogspot.com/2017/10/custom-pop-up-window-with-android-studio.html
         ImageButton imageButton;
         myDialog.setContentView(R.layout.main_menu_popup);
-        imageButton = (ImageButton) myDialog.findViewById(R.id.imageButton);
+        imageButton = myDialog.findViewById(R.id.imageButton);
         imageButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 myDialog.dismiss();
             }
         });
-
-        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        if (myDialog.getWindow() != null)
+            myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         myDialog.show();
+
+        //TODO: Make the settings do something (volume, rumble, etc)
     }
 }
