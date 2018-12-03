@@ -15,9 +15,14 @@ public class GameBoard extends AppCompatActivity {
     private static final String TAG = "GameBoard";
     private GameEngine game_engine;
     private BoardView board_view;
+    private TextView player1Score;
+    private TextView player2Score;
+    private int xWins;
+    private int oWins;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_board);
     }
@@ -55,6 +60,14 @@ public class GameBoard extends AppCompatActivity {
         TextView textView2 = findViewById(R.id.oPlayerNameView);
         textView2.setText(player2Name);
 
+        xWins = 0;
+        oWins = 0;
+
+        player1Score = findViewById(R.id.xPlayerScoreView);
+        player1Score.setText(xWins);
+        player2Score = findViewById(R.id.oPlayerScoreView);
+        player2Score.setText(oWins);
+
         game_engine.setPlayerVCPU(playerVCPU);
         game_engine.setXGoesFirst(xGoesFirst);
         game_engine.newGame();
@@ -62,9 +75,15 @@ public class GameBoard extends AppCompatActivity {
         Log.d(TAG, "End onStart()");
     }   //Here's where all hell breaks loose
 
-    public void menu(View view) {
-        Intent main_menu = new Intent(this, MainActivity.class);
-        main_menu.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(main_menu);
+    public void updateXScore()
+    {
+        xWins++;
+        player1Score.setText(xWins);
+    }
+
+    public void updateOScore()
+    {
+        oWins++;
+        player2Score.setText(oWins);
     }
 }

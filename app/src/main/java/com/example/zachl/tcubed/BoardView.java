@@ -20,10 +20,9 @@ public class BoardView extends View {
     private static final int ELT_MARGIN = 20;
     private static final int ELT_STROKE_WIDTH = 15;
     private int width, height, eltW, eltH;
-    private int xWins = 0;
-    private int oWins = 0;
     private Paint gridPaint, oPaint, xPaint;
     private GameEngine gameEngine;
+    private GameBoard gameBoard;    //TODO: Trying to update scoreboard, by calling method in GameBoard, but don't have access to class from here
     private final static String TAG = "BoardView";
 
     public BoardView(Context context) {
@@ -40,7 +39,6 @@ public class BoardView extends View {
         oPaint.setStrokeWidth(ELT_STROKE_WIDTH);
         xPaint = new Paint(oPaint);
         xPaint.setColor(Color.BLUE);
-
 
         Log.d(TAG, "new BoardView constructed (+attrs)");
     }
@@ -100,9 +98,9 @@ public class BoardView extends View {
     public void gameEnded(char c) {
         String msg = (c == 'T') ? "Game Ended: Tie!" : "Game Ended: " + c + " wins!";
         if (c == 'X')
-            xWins++;
+            //xWins++;  TODO: Replace with call to GameBoard updateXScore()
         if (c == 'O')
-            oWins++;
+            //oWins++;  TODO: Replace with call to GameBoard updateOScore()
 
         new AlertDialog.Builder(getContext()).setTitle("Tic Tac Toe").
                 setMessage(msg).
