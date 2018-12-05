@@ -22,8 +22,15 @@ public class BoardView extends View {
     private int width, height, eltW, eltH;
     private Paint gridPaint, oPaint, xPaint;
     private GameEngine gameEngine;
-    private GameBoard gameBoard;    //TODO: Trying to update scoreboard, by calling method in GameBoard, but don't have access to class from here
+    private GameBoard gameBoard;
     private final static String TAG = "BoardView";
+    /*
+    private GameListener gameListener;
+
+    public void setGameListener(GameListener newGameListener)
+    {
+        gameListener = newGameListener;
+    } */
 
     public BoardView(Context context) {
         super(context);
@@ -44,9 +51,15 @@ public class BoardView extends View {
     }
 
 
-    public void setGameBoard(GameEngine g) {
+    public void setGameEngine(GameEngine g) {
         gameEngine = g;
         Log.d(TAG, "GameEngine set in BoardView!");
+    }
+
+    public void setGameBoard(GameBoard b)
+    {
+        gameBoard = b;
+        Log.d(TAG, "GameBoard is set in BoardView");
     }
 
     @Override
@@ -98,9 +111,9 @@ public class BoardView extends View {
     public void gameEnded(char c) {
         String msg = (c == 'T') ? "Game Ended: Tie!" : "Game Ended: " + c + " wins!";
         if (c == 'X')
-            //xWins++;  TODO: Replace with call to GameBoard updateXScore()
+            gameBoard.incrementXScore();
         if (c == 'O')
-            //oWins++;  TODO: Replace with call to GameBoard updateOScore()
+            gameBoard.incrementOScore();
 
         new AlertDialog.Builder(getContext()).setTitle("Tic Tac Toe").
                 setMessage(msg).

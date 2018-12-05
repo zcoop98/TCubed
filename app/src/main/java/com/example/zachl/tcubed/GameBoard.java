@@ -39,8 +39,11 @@ public class GameBoard extends AppCompatActivity {
         Log.d(TAG, "Constructing GameEngine");
         game_engine = new GameEngine();
 
-        Log.d(TAG,"Setting GameBoard param in BoardView");
-        board_view.setGameBoard(game_engine);
+        Log.d(TAG,"Setting GameEngine param in BoardView");
+        board_view.setGameEngine(game_engine);
+
+        Log.d(TAG, "Setting GameBoard param in BoardView");
+        board_view.setGameBoard(this);
 
         Log.d(TAG, "Receiving intents from PlayMenu:");
         Intent intent = getIntent();
@@ -60,13 +63,19 @@ public class GameBoard extends AppCompatActivity {
         TextView textView2 = findViewById(R.id.oPlayerNameView);
         textView2.setText(player2Name);
 
+        Log.d(TAG, "Setting Score to zero");
+
         xWins = 0;
         oWins = 0;
 
+        Log.d(TAG, "Setting player scores");
+
         player1Score = findViewById(R.id.xPlayerScoreView);
-        player1Score.setText(xWins);
+        player1Score.setText(Integer.toString(xWins));
         player2Score = findViewById(R.id.oPlayerScoreView);
-        player2Score.setText(oWins);
+        player2Score.setText(Integer.toString(oWins));
+
+        Log.d(TAG, "Sending user settings to gameEngine");
 
         game_engine.setPlayerVCPU(playerVCPU);
         game_engine.setXGoesFirst(xGoesFirst);
@@ -75,15 +84,15 @@ public class GameBoard extends AppCompatActivity {
         Log.d(TAG, "End onStart()");
     }   //Here's where all hell breaks loose
 
-    public void updateXScore()
+    public void incrementXScore()
     {
         xWins++;
-        player1Score.setText(xWins);
+        player1Score.setText(Integer.toString(xWins));
     }
 
-    public void updateOScore()
+    public void incrementOScore()
     {
         oWins++;
-        player2Score.setText(oWins);
+        player2Score.setText(Integer.toString(oWins));
     }
 }
