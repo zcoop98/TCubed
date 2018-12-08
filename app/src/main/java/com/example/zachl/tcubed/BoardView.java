@@ -20,11 +20,17 @@ public class BoardView extends View {
     private static final int ELT_MARGIN = 20;
     private static final int ELT_STROKE_WIDTH = 15;
     private int width, height, eltW, eltH;
-    private int xWins = 0;
-    private int oWins = 0;
     private Paint gridPaint, oPaint, xPaint;
     private GameEngine gameEngine;
+    private GameBoard gameBoard;
     private final static String TAG = "BoardView";
+    /*
+    private GameListener gameListener;
+
+    public void setGameListener(GameListener newGameListener)
+    {
+        gameListener = newGameListener;
+    } */
 
     public BoardView(Context context) {
         super(context);
@@ -41,14 +47,19 @@ public class BoardView extends View {
         xPaint = new Paint(oPaint);
         xPaint.setColor(Color.BLUE);
 
-
         Log.d(TAG, "new BoardView constructed (+attrs)");
     }
 
 
-    public void setGameBoard(GameEngine g) {
+    public void setGameEngine(GameEngine g) {
         gameEngine = g;
         Log.d(TAG, "GameEngine set in BoardView!");
+    }
+
+    public void setGameBoard(GameBoard b)
+    {
+        gameBoard = b;
+        Log.d(TAG, "GameBoard is set in BoardView");
     }
 
     @Override
@@ -100,9 +111,9 @@ public class BoardView extends View {
     public void gameEnded(char c) {
         String msg = (c == 'T') ? "Game Ended: Tie!" : "Game Ended: " + c + " wins!";
         if (c == 'X')
-            xWins++;
+            gameBoard.incrementXScore();
         if (c == 'O')
-            oWins++;
+            gameBoard.incrementOScore();
 
         new AlertDialog.Builder(getContext()).setTitle("Tic Tac Toe").
                 setMessage(msg).

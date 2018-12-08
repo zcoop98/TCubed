@@ -108,7 +108,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/xPlayerScoreView"
                 android:layout_width="48dp"
                 android:layout_height="40dp"
                 android:gravity="bottom|left"
@@ -119,7 +119,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
             <TextView
-                android:id="@+id/textView17"
+                android:id="@+id/oPlayerScoreView"
                 android:layout_width="48dp"
                 android:layout_height="40dp"
                 android:gravity="bottom|right"
@@ -128,7 +128,7 @@
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/textView16"
+                app:layout_constraintStart_toEndOf="@+id/xPlayerScoreView"
                 app:layout_constraintTop_toBottomOf="@+id/textView18" />
         </android.support.constraint.ConstraintLayout>
     </FrameLayout>

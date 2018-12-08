@@ -17,6 +17,7 @@
         android:fontFamily="sans-serif"
         android:text="@string/Credits.credits"
         android:textAlignment="center"
+        android:textColor="@color/TextTitle"
         android:textSize="48sp"
         android:typeface="normal"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"

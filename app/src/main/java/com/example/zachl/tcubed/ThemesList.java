@@ -17,6 +17,8 @@ public class ThemesList extends AppCompatActivity {
         NavUtils.navigateUpFromSameTask(this);
     }
 
+    //TODO: Add in links to real themes
+
     // Intent for Theme 1
     public void Theme1(View view) {
 

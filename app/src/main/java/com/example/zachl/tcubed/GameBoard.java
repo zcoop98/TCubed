@@ -15,9 +15,14 @@ public class GameBoard extends AppCompatActivity {
     private static final String TAG = "GameBoard";
     private GameEngine game_engine;
     private BoardView board_view;
+    private TextView player1Score;
+    private TextView player2Score;
+    private int xWins;
+    private int oWins;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_board);
     }
@@ -34,8 +39,11 @@ public class GameBoard extends AppCompatActivity {
         Log.d(TAG, "Constructing GameEngine");
         game_engine = new GameEngine();
 
-        Log.d(TAG,"Setting GameBoard param in BoardView");
-        board_view.setGameBoard(game_engine);
+        Log.d(TAG,"Setting GameEngine param in BoardView");
+        board_view.setGameEngine(game_engine);
+
+        Log.d(TAG, "Setting GameBoard param in BoardView");
+        board_view.setGameBoard(this);
 
         Log.d(TAG, "Receiving intents from PlayMenu:");
         Intent intent = getIntent();
@@ -55,6 +63,20 @@ public class GameBoard extends AppCompatActivity {
         TextView textView2 = findViewById(R.id.oPlayerNameView);
         textView2.setText(player2Name);
 
+        Log.d(TAG, "Setting Score to zero");
+
+        xWins = 0;
+        oWins = 0;
+
+        Log.d(TAG, "Setting player scores");
+
+        player1Score = findViewById(R.id.xPlayerScoreView);
+        player1Score.setText(Integer.toString(xWins));
+        player2Score = findViewById(R.id.oPlayerScoreView);
+        player2Score.setText(Integer.toString(oWins));
+
+        Log.d(TAG, "Sending user settings to gameEngine");
+
         game_engine.setPlayerVCPU(playerVCPU);
         game_engine.setXGoesFirst(xGoesFirst);
         game_engine.newGame();
@@ -62,9 +84,15 @@ public class GameBoard extends AppCompatActivity {
         Log.d(TAG, "End onStart()");
     }   //Here's where all hell breaks loose
 
-    public void menu(View view) {
-        Intent main_menu = new Intent(this, MainActivity.class);
-        main_menu.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(main_menu);
+    public void incrementXScore()
+    {
+        xWins++;
+        player1Score.setText(Integer.toString(xWins));
+    }
+
+    public void incrementOScore()
+    {
+        oWins++;
+        player2Score.setText(Integer.toString(oWins));
     }
 }
