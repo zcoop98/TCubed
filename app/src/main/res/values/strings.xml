@@ -23,7 +23,9 @@
     // DirectionsMenu
 
     <string name="DirectionsMenu.title">Directions</string>
-    <string name="DirectionsMenu.description">This is a simple tic-tac-toe game. Get three of your icons in a row to win!</string>
+    <string name="DirectionsMenu.description"> <b>This is a simple tic-tac-toe game.</b> \n\nGet three of your icons in a row to win!
+        \n\nWhen playing a <u>Player vs Computer</u> game the user will always get to play first and see who will win in a battle of wits!
+        \n\nWhen playing a <u>Player vs Player</u> game the users which each take their turn placing down one of their pieces with the goal of trying to get three in a row while also stopping your opponent from doing the same!</string>
     <string name="DirectionsMenu.directions">Directions</string>
 
     // Activity_Play_Menu
