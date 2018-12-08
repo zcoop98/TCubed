@@ -54,12 +54,13 @@
         android:id="@+id/scrollView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline7"
         app:layout_constraintVertical_bias="1.0">
@@ -72,92 +73,62 @@
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="40dp"
                 android:fontFamily="sans-serif-smallcaps"
-                android:text="@string/Misc.placeholder"
+                android:text="@string/programmer_1_zachary_leonard"
+                android:textAlignment="center"
                 android:textColor="@color/Text"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="40dp"
                 android:fontFamily="sans-serif-smallcaps"
-                android:text="@string/Misc.placeholder"
+                android:text="@string/programmer_2_jillian_mcdaniel"
+                android:textAlignment="center"
                 android:textColor="@color/Text"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="40dp"
                 android:fontFamily="sans-serif-smallcaps"
-                android:text="@string/Misc.placeholder"
+                android:text="@string/programmer_3_peter_young"
+                android:textAlignment="center"
                 android:textColor="@color/Text"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="40dp"
                 android:fontFamily="sans-serif-smallcaps"
-                android:text="@string/Misc.placeholder"
+                android:text="@string/teacher_doctor_lew"
+                android:textAlignment="center"
                 android:textColor="@color/Text"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="40dp"
                 android:fontFamily="sans-serif-smallcaps"
-                android:text="@string/Misc.placeholder"
+                android:text="@string/lord_and_saviour_god"
+                android:textAlignment="center"
                 android:textColor="@color/Text"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="50dp"
                 android:fontFamily="sans-serif-smallcaps"
-                android:text="@string/Misc.placeholder"
+                android:text="@string/everyone_who_did_testing_for_us"
+                android:textAlignment="center"
                 android:textColor="@color/Text"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="sans-serif-smallcaps"
-                android:text="@string/Misc.placeholder"
-                android:textColor="@color/Text"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="sans-serif-smallcaps"
-                android:text="@string/Misc.placeholder"
-                android:textColor="@color/Text"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="sans-serif-smallcaps"
-                android:text="@string/Misc.placeholder"
-                android:textColor="@color/Text"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="sans-serif-smallcaps"
-                android:text="@string/Misc.placeholder"
-                android:textColor="@color/Text"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
         </LinearLayout>
     </ScrollView>
