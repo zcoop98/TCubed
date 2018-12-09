@@ -1,6 +1,11 @@
 package com.example.zachl.tcubed;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Build;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -88,11 +93,32 @@ public class GameBoard extends AppCompatActivity {
     {
         xWins++;
         player1Score.setText(Integer.toString(xWins));
+        vibrate();
     }
 
     public void incrementOScore()
     {
         oWins++;
         player2Score.setText(Integer.toString(oWins));
+        vibrate();
+    }
+
+    public void vibrate()
+    {
+        SharedPreferences prefs = this.getSharedPreferences("com.example.zachl.tcubed", Context.MODE_PRIVATE);
+
+        String rumbleOffKey = "com.example.zachl.tcubed.noRumbleKey";
+
+        try {
+            if (Build.VERSION.SDK_INT >= 26 && !prefs.getBoolean(rumbleOffKey, false)) {
+                ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(VibrationEffect.createOneShot(500, 255));
+            } else {
+                ((Vibrator) getSystemService(VIBRATOR_SERVICE)).vibrate(150);
+            }
+        }
+        catch(java.lang.NullPointerException e)
+        {
+            Log.d(TAG, "NullPointerException at Vibrator call");
+        }
     }
 }

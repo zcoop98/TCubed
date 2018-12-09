@@ -2,22 +2,18 @@
 <android.support.v7.preference.PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <android.support.v7.preference.PreferenceCategory
-        android:title="Category 1">
-
         <android.support.v7.preference.CheckBoxPreference
-            android:key="muteKey"
+            android:key="com.example.zachl.tcubed.muteKey"
             android:title="Mute"
             android:summary="Turn sound on or off"
             android:defaultValue="true"/>
 
         <android.support.v7.preference.CheckBoxPreference
-            android:key="rumbleKey"
+            android:key="com.example.zachl.tcubed.noRumbleKey"
             android:title="Rumble"
             android:summary="Turn rumble on or off"
             android:defaultValue="true"/>
 
-    </android.support.v7.preference.PreferenceCategory>
 
 </android.support.v7.preference.PreferenceScreen>
 
