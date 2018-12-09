@@ -2,7 +2,9 @@ package com.example.zachl.tcubed;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -28,14 +30,9 @@ public class BoardView extends View {
     private Paint gridPaint, oPaint, xPaint;
     private GameEngine gameEngine;
     private GameBoard gameBoard;
+    private Bitmap oBitmp;
+    private Bitmap xBitmp;
     private final static String TAG = "BoardView";
-    /*
-    private GameListener gameListener;
-
-    public void setGameListener(GameListener newGameListener)
-    {
-        gameListener = newGameListener;
-    } */
 
     public BoardView(Context context) {
         super(context);
@@ -51,6 +48,17 @@ public class BoardView extends View {
         oPaint.setStrokeWidth(ELT_STROKE_WIDTH);
         xPaint = new Paint(oPaint);
         xPaint.setColor(Color.BLUE);
+
+
+        //Replace '0' with some kind of icon selection- 0 as default if no icons desired
+        int xID = 0;
+        int oID = 0;
+
+        try {
+            xBitmp = BitmapFactory.decodeResource(getResources(), xID);
+            oBitmp = BitmapFactory.decodeResource(getResources(), oID);
+        }
+        catch (java.lang.NullPointerException e) { }
 
         Log.d(TAG, "new BoardView constructed (+attrs)");
     }
@@ -167,22 +175,19 @@ public class BoardView extends View {
     //x = row [0,2]
     //y = col [0,2]
     private void drawElt(Canvas canvas, char c, int x, int y) {
-        if (c == 'O') { //Draw a circle game piece in selected position
-
+        if (c == 'O' && oBitmp == null) { //Draw a circle game piece in selected position
             float cx = (eltW * x) + eltW / 2;
             float cy = (eltH * y) + eltH / 2;   //calculating center point of circle
 
-            Log.d(TAG, "");
-
             canvas.drawCircle(cx, cy, Math.min(eltW, eltH) / 2 - ELT_MARGIN * 2, oPaint);
 
-            //TODO: Change images to bitmap and add means to select correct icon
-            /*
-            Bitmap bitmp;
+            //TODO: Add means to select correct icon
+        }
+        else if (c == 'O') {
             Rect rectangle = new Rect(eltW * x, eltH * y, eltW * x + eltW, eltH * y + eltH);
-            canvas.drawBitmap(bitmp, null, rectangle, null);
-            */
-        } else if (c == 'X') {  //Draw an X game piece in selected position
+            canvas.drawBitmap(oBitmp, null, rectangle, null);
+        }
+        else if (c == 'X' && xBitmp == null) {  //Draw an X game piece in selected position
             float startX = (eltW * x) + ELT_MARGIN;
             float startY = (eltH * y) + ELT_MARGIN / 4 * 3;
             float endX = startX + eltW - ELT_MARGIN * 2;
@@ -196,6 +201,10 @@ public class BoardView extends View {
             float endY2 = startY2 + eltH - ELT_MARGIN;
 
             canvas.drawLine(startX2, startY2, endX2, endY2, xPaint);
+        }
+        else if (c == 'X') {
+            Rect rectangle = new Rect(eltW * x, eltH * y, eltW * x + eltW, eltH * y + eltH);
+            canvas.drawBitmap(xBitmp, null, rectangle, null);
         }
     }
 }
