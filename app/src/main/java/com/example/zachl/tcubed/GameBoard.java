@@ -7,7 +7,6 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
-import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -46,17 +45,17 @@ public class GameBoard extends AppCompatActivity {
         Log.d(TAG, "onStart() Firing");
         super.onStart();
 
-        int colorCode = mPreferences.getInt(BACKGROUND_KEY, 0);
+        int colorCode = getResources().getInteger(mPreferences.getInt(BACKGROUND_KEY, 0));
 
         Log.d(TAG, "Retrieved color code: " + colorCode);
 
-        int r = (byte) colorCode & (byte) 0xFF0000;
-        int g = (byte) colorCode & (byte) 0x00FF00;
-        int b = (byte) colorCode & (byte) 0x0000FF;
+        int r = (colorCode >> 16) & 0xFF;
+        int g = (colorCode >> 8) & 0xFF;
+        int b = colorCode & 0xFF;
 
         Log.d(TAG, "Extracted RGB vals- R: " + r + " G: " + g + " B: " + b);
 
-        //findViewById(R.id.boardLayout).setBackgroundColor(Color.rgb(r, g, b));
+        findViewById(R.id.boardLayout).setBackgroundColor(Color.rgb(r, g, b));
 
         Log.d(TAG, "Set background color pref\nConstructing BoardView");
         board_view = findViewById(R.id.board);
