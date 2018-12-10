@@ -63,78 +63,71 @@
             <Button
                 android:id="@+id/button30"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:onClick="Theme1"
                 android:text="@string/ThemesList.example" />
 
             <Button
                 android:id="@+id/button12"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="Theme1"
+                android:layout_height="50dp"
+                android:onClick="Theme2"
                 android:text="@string/ThemesList.example" />
 
             <Button
                 android:id="@+id/button13"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="Theme1"
+                android:layout_height="50dp"
+                android:onClick="Theme3"
                 android:text="@string/ThemesList.example" />
 
             <Button
                 android:id="@+id/button14"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="Theme1"
+                android:layout_height="50dp"
+                android:onClick="Theme4"
                 android:text="@string/ThemesList.example" />
 
             <Button
                 android:id="@+id/button15"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="Theme1"
+                android:layout_height="50dp"
+                android:onClick="Theme5"
                 android:text="@string/ThemesList.example" />
 
             <Button
                 android:id="@+id/button16"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="Theme1"
+                android:layout_height="50dp"
+                android:onClick="Theme6"
                 android:text="@string/ThemesList.example" />
 
             <Button
                 android:id="@+id/button17"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="Theme1"
+                android:layout_height="50dp"
+                android:onClick="Theme7"
                 android:text="@string/ThemesList.example" />
 
             <Button
                 android:id="@+id/button18"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="Theme1"
+                android:layout_height="50dp"
+                android:onClick="Theme8"
                 android:text="@string/ThemesList.example" />
 
             <Button
                 android:id="@+id/button19"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="Theme1"
+                android:layout_height="50dp"
+                android:onClick="Theme9"
                 android:text="@string/ThemesList.example" />
 
             <Button
                 android:id="@+id/button20"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="Theme1"
-                android:text="@string/ThemesList.example" />
-
-            <Button
-                android:id="@+id/button21"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="Theme1"
+                android:layout_height="50dp"
+                android:onClick="Theme10"
                 android:text="@string/ThemesList.example" />
 
         </LinearLayout>
