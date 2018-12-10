@@ -41,7 +41,6 @@ public class GameBoard extends AppCompatActivity {
 
     protected void onStart()
     {
-
         Log.d(TAG, "onStart() Firing");
         super.onStart();
 
