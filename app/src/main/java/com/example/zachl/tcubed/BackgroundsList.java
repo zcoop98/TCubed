@@ -98,7 +98,7 @@ public class BackgroundsList extends AppCompatActivity {
 
     public void grayBackground(View view) {
         mPreferences.edit().putInt(BACKGROUND_KEY, R.color.background10_gray).apply();
-        statusMessage("Grey");
+        statusMessage("Gray");
         back(view);
     }
 
