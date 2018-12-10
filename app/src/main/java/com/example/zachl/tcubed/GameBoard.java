@@ -110,7 +110,7 @@ public class GameBoard extends AppCompatActivity {
 
     public void vibrate()
     {
-        SharedPreferences prefs = this.getSharedPreferences("com.example.zachl.tcubed", Context.MODE_PRIVATE);
+        SharedPreferences prefs = getApplicationContext().getSharedPreferences("com.example.zachl.tcubed", Context.MODE_PRIVATE);
 
         String rumbleOffKey = "com.example.zachl.tcubed.noRumbleKey";
 

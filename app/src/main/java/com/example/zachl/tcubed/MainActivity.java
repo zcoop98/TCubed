@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private static final String MUTE_KEY = "com.example.zachl.tcubed.muteKey";
     private static final String NO_RUMBLE_KEY = "com.example.zachl.tcubed.noRumbleKey";
-    private SharedPreferences mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
     private static final String sharedPrefFile = "com.example.zachl.tcubed.sharedPrefs";
+    private SharedPreferences mPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         myDialog = new Dialog(this);
 
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
+        mPreferences = getApplicationContext().getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
     }
 
     // Intent for Play Button

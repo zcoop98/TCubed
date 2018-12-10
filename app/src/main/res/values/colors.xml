@@ -43,18 +43,4 @@
     <color name="pastry_theme_background">#ff96e7</color>
     <color name="pastry_theme_accent_stripe">#332a21</color>
     <color name="pastry_theme_header_text">#fdf6d9</color>
-
-    <array name="background">
-        <item>@color/background01_white</item>
-        <item>@color/background02_pink</item>
-        <item>@color/background03_red</item>
-        <item>@color/background04_orange</item>
-        <item>@color/background05_yellow</item>
-        <item>@color/background06_green</item>
-        <item>@color/background07_light_blue</item>
-        <item>@color/background08_dark_blue</item>
-        <item>@color/background09_purple</item>
-        <item>@color/background10_gray</item>
-        <item>@color/background11_black</item>
-    </array>
 </resources>

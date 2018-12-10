@@ -16,6 +16,8 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
+import java.lang.reflect.Field;
+
 public class BoardView extends View {
 
     private static final int LINE_THICK = 5;
@@ -28,9 +30,10 @@ public class BoardView extends View {
     private Bitmap oBitmp;
     private Bitmap xBitmp;
     private static final String sharedPrefFile = "com.example.zachl.tcubed.sharedPrefs";
-    private SharedPreferences mPreferences = getContext().getSharedPreferences(sharedPrefFile, Context.MODE_PRIVATE);
+    private SharedPreferences mPreferences;
     private static final String ICON_KEY = "com.example.zachl.tcubed.iconKey";
-    String[] fileArr  = getResources().getStringArray(R.array.icons_save);
+    String[] xFileArr = getResources().getStringArray(R.array.iconsX);
+    String[] oFileArr = getResources().getStringArray(R.array.iconsO);
     private final static String TAG = "BoardView";
 
     public BoardView(Context context) {
@@ -48,20 +51,45 @@ public class BoardView extends View {
         xPaint = new Paint(oPaint);
         xPaint.setColor(Color.BLUE);
 
+        mPreferences = context.getApplicationContext().getSharedPreferences(sharedPrefFile, Context.MODE_PRIVATE);
 
-        //Replace '0' with some kind of icon selection- 0 as default if no icons desired
-        int xID = fileArr[Integer.parseInt(mPreferences.getString(ICON_KEY, "0"))];   //Use pref value to access array to get file name to retrieve icon
-        int oID = 0;
+        int fileIndex = mPreferences.getInt(ICON_KEY, 0);
 
-        try {
+        Log.d(TAG, "Retrieved file index: " + fileIndex);
+
+        String xIconName = xFileArr[fileIndex];
+        String oIconName = oFileArr[fileIndex];
+
+        Log.d(TAG, "Retrieved file names from arrs- X: " + xIconName + " O: " + oIconName);
+
+        int xID = getResId(xIconName, R.drawable.class);   //Use pref value to access array to get file name to retrieve icon
+        int oID = getResId(oIconName, R.drawable.class);
+
+        Log.d(TAG, "Retrieved file IDs- X: " + xID + " O: " + oID);
+
+        if (xID != 0 && oID != 0) {
             xBitmp = BitmapFactory.decodeResource(getResources(), xID);
             oBitmp = BitmapFactory.decodeResource(getResources(), oID);
         }
-        catch (java.lang.NullPointerException e) { }
+        else {
+            xBitmp = null;
+            oBitmp = null;
+        }
 
         Log.d(TAG, "new BoardView constructed (+attrs)");
     }
 
+    public static int getResId(String resName, Class<?> c) {
+
+        try {
+            Field idField = c.getDeclaredField(resName);
+            return idField.getInt(idField);
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.d(TAG, "[ERROR: GetResId ERROR]");
+            return -1;
+        }
+    }
 
     public void setGameEngine(GameEngine g) {
         gameEngine = g;
@@ -188,7 +216,6 @@ public class BoardView extends View {
 
             canvas.drawCircle(cx, cy, Math.min(eltW, eltH) / 2 - ELT_MARGIN * 2, oPaint);
 
-            //TODO: Add means to select correct icon
         }
         else if (c == 'O') {
             Rect rectangle = new Rect(eltW * x, eltH * y, eltW * x + eltW, eltH * y + eltH);

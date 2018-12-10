@@ -9,13 +9,15 @@ import android.view.View;
 public class IconsList extends AppCompatActivity {
 
     private static final String sharedPrefFile = "com.example.zachl.tcubed.sharedPrefs";
-    private SharedPreferences mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
+    private SharedPreferences mPreferences;
     private static final String ICON_KEY = "com.example.zachl.tcubed.iconKey";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_icons_list);
+
+        mPreferences = getApplicationContext().getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
     }
 
     public void back(View view) {

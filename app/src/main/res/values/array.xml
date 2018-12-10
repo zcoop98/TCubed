@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    //Preferences
+    //Themes
+
     <string-array name="Themes">
         <item></item>
     </string-array>
+
+    //Icons
 
     <string-array name="iconsO">
         <item></item>
@@ -36,4 +39,21 @@
         <item>3</item>
         <item>4</item>
     </integer-array>
+
+    //Backgrounds
+
+    <string-array name="background">
+        <item>background01_white</item>
+        <item>background02_pink</item>
+        <item>background03_red</item>
+        <item>background04_orange</item>
+        <item>background05_yellow</item>
+        <item>background06_green</item>
+        <item>background07_light_blue</item>
+        <item>background08_dark_blue</item>
+        <item>background09_purple</item>
+        <item>background10_gray</item>
+        <item>background11_black</item>
+    </string-array>
+
 </resources>
