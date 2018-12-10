@@ -64,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:onClick="defaultIcon"
-                android:text="Default" />
+                android:text="@string/IconsList.button.default" />
 
             <Space
                 android:id="@+id/space01"
@@ -76,7 +76,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:onClick="bakeryIcon"
-                android:text="Bakery" />
+                android:text="@string/IconsList.button.bakery" />
 
             <Space
                 android:id="@+id/space02"
@@ -88,7 +88,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:onClick="christmasIcon"
-                android:text="Christmas" />
+                android:text="@string/IconsList.button.christmas" />
 
             <Space
                 android:id="@+id/space03"
@@ -100,7 +100,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:onClick="galaxyIcon"
-                android:text="Galaxy" />
+                android:text="@string/IconsList.button.galaxy" />
 
             <Space
                 android:id="@+id/space04"
@@ -112,7 +112,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:onClick="halloweenIcon"
-                android:text="Halloween" />
+                android:text="@string/IconsList.button.halloween" />
 
         </LinearLayout>
     </ScrollView>

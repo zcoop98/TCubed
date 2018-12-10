@@ -65,77 +65,77 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:onClick="defaultBackground"
-                android:text="Default" />
+                android:text="@string/BackgroundsList.button.default" />
 
             <Button
                 android:id="@+id/button33"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:onClick="whiteBackground"
-                android:text="White" />
+                android:text="@string/BackgroundsList.button.white" />
 
             <Button
                 android:id="@+id/button34"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:onClick="pinkBackground"
-                android:text="Pink" />
+                android:text="@string/BackgroundsList.button.pink" />
 
             <Button
                 android:id="@+id/button35"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:onClick="redBackground"
-                android:text="Red" />
+                android:text="@string/BackgroundsList.button.red" />
 
             <Button
                 android:id="@+id/button36"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:onClick="orangeBackground"
-                android:text="Orange" />
+                android:text="@string/BackgroundsList.button.orange" />
 
             <Button
                 android:id="@+id/button37"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:onClick="yellowBackground"
-                android:text="Yellow" />
+                android:text="@string/BackgroundsList.button.yellow" />
 
             <Button
                 android:id="@+id/button38"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:onClick="greenBackground"
-                android:text="Green" />
+                android:text="@string/BackgroundsList.button.green" />
 
             <Button
                 android:id="@+id/button39"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:onClick="lightBlueBackground"
-                android:text="Light Blue" />
+                android:text="@string/BackgroundsList.button.light_blue" />
 
             <Button
                 android:id="@+id/button40"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:onClick="blueBackground"
-                android:text="Blue" />
+                android:text="@string/BackgroundsList.button.blue" />
 
             <Button
                 android:id="@+id/button41"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:onClick="purpleBackground"
-                android:text="Purple" />
+                android:text="@string/BackgroundsList.button.purple" />
 
             <Button
                 android:id="@+id/button42"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:onClick="grayBackground"
-                android:text="Gray" />
+                android:text="@string/BackgroundsList.button.gray" />
 
         </LinearLayout>
     </ScrollView>

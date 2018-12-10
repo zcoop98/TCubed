@@ -84,5 +84,21 @@
     <string name="everyone_who_did_testing_for_us">Special Thanks to Everyone who did testing for us</string>
     <string name="programmer_3_peter_young">Programmer 3: <u>Peter Young</u></string>
     <string name="teacher_doctor_lew">Teacher: <u>Doctor Lew</u></string>
+    <string name="BackgroundsList.button.gray">Gray</string>
+    <string name="BackgroundsList.button.purple">Purple</string>
+    <string name="BackgroundsList.button.blue">Blue</string>
+    <string name="BackgroundsList.button.light_blue">Light Blue</string>
+    <string name="BackgroundsList.button.green">Green</string>
+    <string name="BackgroundsList.button.yellow">Yellow</string>
+    <string name="BackgroundsList.button.orange">Orange</string>
+    <string name="BackgroundsList.button.red">Red</string>
+    <string name="BackgroundsList.button.pink">Pink</string>
+    <string name="BackgroundsList.button.white">White</string>
+    <string name="BackgroundsList.button.default">Default</string>
+    <string name="IconsList.button.halloween">Halloween</string>
+    <string name="IconsList.button.galaxy">Galaxy</string>
+    <string name="IconsList.button.christmas">Christmas</string>
+    <string name="IconsList.button.bakery">Bakery</string>
+    <string name="IconsList.button.default">Default</string>
 
 </resources>
