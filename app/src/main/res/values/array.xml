@@ -43,6 +43,7 @@
     //Backgrounds
 
     <string-array name="background">
+        <item>Background</item> <!-- Default -->
         <item>background01_white</item>
         <item>background02_pink</item>
         <item>background03_red</item>
@@ -53,7 +54,21 @@
         <item>background08_dark_blue</item>
         <item>background09_purple</item>
         <item>background10_gray</item>
-        <item>background11_black</item>
     </string-array>
+
+    <integer-array name="background_index">
+        <item>0</item> <!-- Default -->
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+    </integer-array>
 
 </resources>

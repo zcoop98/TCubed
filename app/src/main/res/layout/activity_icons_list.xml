@@ -60,37 +60,57 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button10"
+                android:id="@+id/iconButtonDefault"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:onClick="defaultIcon"
                 android:text="Default" />
 
-            <Button
-                android:id="@+id/button22"
+            <Space
+                android:id="@+id/space01"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="20dp" />
+
+            <Button
+                android:id="@+id/iconButtonBakery"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:onClick="bakeryIcon"
                 android:text="Bakery" />
 
-            <Button
-                android:id="@+id/button23"
+            <Space
+                android:id="@+id/space02"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="christmasIcon"
-                android:text="Christams" />
+                android:layout_height="20dp" />
 
             <Button
-                android:id="@+id/button24"
+                android:id="@+id/iconButtonChristmas"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:onClick="christmasIcon"
+                android:text="Christmas" />
+
+            <Space
+                android:id="@+id/space03"
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <Button
+                android:id="@+id/iconButtonGalaxy"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:onClick="galaxyIcon"
                 android:text="Galaxy" />
 
-            <Button
-                android:id="@+id/button25"
+            <Space
+                android:id="@+id/space04"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="20dp" />
+
+            <Button
+                android:id="@+id/iconButtonHalloween"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:onClick="halloweenIcon"
                 android:text="Halloween" />
 
