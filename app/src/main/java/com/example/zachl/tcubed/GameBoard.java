@@ -44,7 +44,7 @@ public class GameBoard extends AppCompatActivity {
         Log.d(TAG, "onStart() Firing");
         super.onStart();
 
-        int colorCode = getResources().getInteger(mPreferences.getInt(BACKGROUND_KEY, 0));
+        int colorCode = getResources().getInteger(mPreferences.getInt(BACKGROUND_KEY, R.color.Background));
 
         Log.d(TAG, "Retrieved color code: " + colorCode);
 

@@ -19,7 +19,7 @@
         android:title="Icon Select"/>
 
     <ListPreference
-        android:defaultValue="0"
+        android:defaultValue="@color/Background"
         android:entryValues="@array/background"
         android:key="com.example.zachl.tcubed.backgroundKey"
         android:title="Background Select"/>
