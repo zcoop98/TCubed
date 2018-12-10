@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="com.example.zachl.tcubed.muteKey"
+        android:title="Mute" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="com.example.zachl.tcubed.noRumbleKey"
+        android:title="Rumble" />
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/icons_names"
+        android:entryValues="@array/icons_save"
+        android:key="icons"
+        android:title="List preference" />
+
+
+</PreferenceScreen>

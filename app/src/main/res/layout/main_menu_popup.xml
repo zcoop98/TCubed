@@ -111,4 +111,5 @@
         app:layout_constraintStart_toStartOf="@+id/noRumbleSwitch"
         app:layout_constraintTop_toTopOf="@+id/noRumbleSwitch" />
 
+
 </android.support.constraint.ConstraintLayout>

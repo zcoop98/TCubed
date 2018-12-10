@@ -8,27 +8,27 @@
     <color name="accent_material_light_1">#c3d2d5</color>
     <color name="Frame">#e9b8b3</color>
 
-    <color name="background1_white">#ffffff</color>
-    <color name="background2_pink">#f76dbd</color>
-    <color name="background3_red">#ff0000</color>
-    <color name="background4_orange">#ff8800</color>
-    <color name="background5_yellow">#ffee00</color>
-    <color name="background6_green">#2bff00</color>
-    <color name="background7_light_blue">#00ffee</color>
-    <color name="background8_dark_blue">#0004ff</color>
-    <color name="background9_purple">#e100ff</color>
+    <color name="background01_white">#ffffff</color>
+    <color name="background02_pink">#f76dbd</color>
+    <color name="background03_red">#ff0000</color>
+    <color name="background04_orange">#ff8800</color>
+    <color name="background05_yellow">#ffee00</color>
+    <color name="background06_green">#2bff00</color>
+    <color name="background07_light_blue">#00ffee</color>
+    <color name="background08_dark_blue">#0004ff</color>
+    <color name="background09_purple">#e100ff</color>
     <color name="background10_gray">#535353</color>
     <color name="background11_black">#000000</color>
 
-    <color name="accent_stripe1_white">#535353</color>
-    <color name="accent_stripe2_pink">#e2217f</color>
-    <color name="accent_stripe3_red">#ef85b5</color>
-    <color name="accent_stripe4_orange">#f9bd81</color>
-    <color name="accent_stripe5_yellow">#fff690</color>
-    <color name="accent_stripe6_green">#9eff96</color>
-    <color name="accent_stripe7_light_blue">#bcfffb</color>
-    <color name="accent_stripe8_dark_blue">#acb2ff</color>
-    <color name="accent_stripe9_purple">#f6a1ff</color>
+    <color name="accent_stripe01_white">#535353</color>
+    <color name="accent_stripe02_pink">#e2217f</color>
+    <color name="accent_stripe03_red">#ef85b5</color>
+    <color name="accent_stripe04_orange">#f9bd81</color>
+    <color name="accent_stripe05_yellow">#fff690</color>
+    <color name="accent_stripe06_green">#9eff96</color>
+    <color name="accent_stripe07_light_blue">#bcfffb</color>
+    <color name="accent_stripe08_dark_blue">#acb2ff</color>
+    <color name="accent_stripe09_purple">#f6a1ff</color>
     <color name="accent_stripe10_gray">#bababa</color>
     <color name="accent_stripe11_black">#ffffff</color>
 
@@ -43,4 +43,18 @@
     <color name="pastry_theme_background">#ff96e7</color>
     <color name="pastry_theme_accent_stripe">#332a21</color>
     <color name="pastry_theme_header_text">#fdf6d9</color>
+
+    <array name="background">
+        <item>@color/background01_white</item>
+        <item>@color/background02_pink</item>
+        <item>@color/background03_red</item>
+        <item>@color/background04_orange</item>
+        <item>@color/background05_yellow</item>
+        <item>@color/background06_green</item>
+        <item>@color/background07_light_blue</item>
+        <item>@color/background08_dark_blue</item>
+        <item>@color/background09_purple</item>
+        <item>@color/background10_gray</item>
+        <item>@color/background11_black</item>
+    </array>
 </resources>

@@ -10,6 +10,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.preference.PreferenceManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,6 +20,7 @@ import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import static com.example.zachl.tcubed.R.id.board;
 
@@ -27,12 +29,25 @@ import static com.example.zachl.tcubed.R.id.board;
 public class MainActivity extends AppCompatActivity {
     Dialog myDialog;
     private static final String TAG = "MainActivity";
+    private static final String MUTE_KEY = "com.example.zachl.tcubed.muteKey";
+    private static final String NO_RUMBLE_KEY = "com.example.zachl.tcubed.noRumbleKey";
+    private SharedPreferences mPreferences;
+    private int mIcons;
+    private int mBackgroundColor;
+    private static final String sharedPrefFile = "com.example.zachl.tcubed.sharedPrefs";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         myDialog = new Dialog(this);
+
+        PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
+        mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
+        mIcons = 0;
+        mBackgroundColor = getColor(R.color.Background);
+
+
     }
 
     // Intent for Play Button
@@ -74,75 +89,34 @@ public class MainActivity extends AppCompatActivity {
         if (myDialog.getWindow() != null)   //Safety net to settle a warning
             myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
-        Log.d(TAG, "Storing prefs");
-        SharedPreferences prefs = this.getSharedPreferences("com.example.zachl.tcubed", Context.MODE_PRIVATE);
+        Switch muteSwitch = myDialog.findViewById(R.id.muteSwitch);
+        if (muteSwitch == null)
+            Log.d(TAG, "muteSwitch = null");
+        Switch noRumbleSwitch = myDialog.findViewById(R.id.noRumbleSwitch);
+        if (noRumbleSwitch == null)
+            Log.d(TAG, "noRumbleSwitch = null");
 
-        Log.d(TAG, "Completed pref store");
+        muteSwitch.setChecked(mPreferences.getBoolean(MUTE_KEY, false));
+        noRumbleSwitch.setChecked(mPreferences.getBoolean(NO_RUMBLE_KEY, false));
 
-        String muteKey = "com.example.zachl.tcubed.muteKey";
-        String noRumbleKey = "com.example.zachl.tcubed.noRumbleKey";
+        muteSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                mPreferences.edit().putBoolean(MUTE_KEY, isChecked).apply();
+                Log.d(TAG, "Updated Mute");
+            }
+        });
 
-        Log.d(TAG, "Stored keys");
+        Log.d(TAG, "Starting rumbleSwitch listener");
 
-        boolean mute = prefs.getBoolean(muteKey, false);
-        boolean rumbleOff = prefs.getBoolean(noRumbleKey, false);
-
-        Log.d(TAG, "Stored switch vals from prefs");
-
-        Switch muteSwitch = findViewById(R.id.muteSwitch);
-        Switch noRumbleSwitch = findViewById(R.id.noRumbleSwitch);
-
-        if (muteSwitch != null && noRumbleSwitch != null)
-        {
-            Log.d(TAG, "Stored switch objects");
-
-            muteSwitch.setChecked(mute);
-            noRumbleSwitch.setChecked(rumbleOff);
-
-            Log.d(TAG, "Set dialog switch vals");
-
-            Log.d(TAG, "Starting muteSwitch listener");
-
-            muteSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    muteChange(isChecked);
-                }
-            });
-
-            Log.d(TAG, "Starting rumbleSwitch listener");
-
-            noRumbleSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    rumbleChange(isChecked);
-                }
-            });
-
-        }
+        noRumbleSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                mPreferences.edit().putBoolean(NO_RUMBLE_KEY, isChecked).apply();
+                Log.d(TAG, "Updated Rumble");
+            }
+        });
 
         myDialog.show();    //Show popup
-    }
-
-    public void muteChange(boolean changedTo)
-    {
-        Log.d(TAG, "muteChange run");
-
-        SharedPreferences prefs = this.getSharedPreferences("com.example.zachl.tcubed", Context.MODE_PRIVATE);
-
-        String muteKey = "com.example.zachl.tcubed.muteKey";
-
-        prefs.edit().putBoolean(muteKey, changedTo).apply();
-    }
-
-    public void rumbleChange(boolean changedTo)
-    {
-        Log.d(TAG, "rumbleChange running");
-
-        SharedPreferences prefs = this.getSharedPreferences("com.example.zachl.tcubed", Context.MODE_PRIVATE);
-
-        String noRumbleKey = "com.example.zachl.tcubed.noRumbleKey";
-
-        prefs.edit().putBoolean(noRumbleKey, changedTo).apply();
     }
 }

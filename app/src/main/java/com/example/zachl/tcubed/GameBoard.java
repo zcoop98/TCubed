@@ -8,7 +8,6 @@ import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 import android.util.Log;
 
@@ -22,6 +21,8 @@ public class GameBoard extends AppCompatActivity {
     private BoardView board_view;
     private TextView player1Score;
     private TextView player2Score;
+    private String playerXName;
+    private String playerOName;
     private int xWins;
     private int oWins;
 
@@ -52,21 +53,25 @@ public class GameBoard extends AppCompatActivity {
 
         Log.d(TAG, "Receiving intents from PlayMenu:");
         Intent intent = getIntent();
-        String player1Name = intent.getStringExtra(XNAME);
-        if (player1Name.equals(""))
-            player1Name = "X Player";
-        String player2Name = intent.getStringExtra(ONAME);
-        if (player2Name.equals(""))
-            player2Name = "O Player";
+        playerXName = intent.getStringExtra(XNAME);
+
+        if (playerXName.equals(""))
+            playerXName = "X Player";
+
+        playerOName = intent.getStringExtra(ONAME);
+
+        if (playerOName.equals(""))
+            playerOName = "O Player";
+
         boolean playerVCPU = intent.getBooleanExtra(PVPSWITCH, false);
         boolean xGoesFirst = intent.getBooleanExtra(XOSWITCH, false);
 
-        Log.d(TAG, "*P1Name: " + player1Name + "\n*P2Name: " + player2Name + "\n*playerVCPU = " + playerVCPU + "\n*xGoesFirst = " + xGoesFirst);
+        Log.d(TAG, "*P1Name: " + playerXName + "\n*P2Name: " + playerOName + "\n*playerVCPU = " + playerVCPU + "\n*xGoesFirst = " + xGoesFirst);
 
         TextView textView = findViewById(R.id.xPlayerNameView);
-        textView.setText(player1Name);
+        textView.setText(playerXName);
         TextView textView2 = findViewById(R.id.oPlayerNameView);
-        textView2.setText(player2Name);
+        textView2.setText(playerOName);
 
         Log.d(TAG, "Setting Score to zero");
 
@@ -120,5 +125,15 @@ public class GameBoard extends AppCompatActivity {
         {
             Log.d(TAG, "NullPointerException at Vibrator call");
         }
+    }
+
+    public String getPlayerXName()
+    {
+        return playerXName;
+    }
+
+    public String getPlayerOName()
+    {
+        return playerOName;
     }
 }

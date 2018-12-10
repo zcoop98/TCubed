@@ -121,13 +121,21 @@ public class BoardView extends View {
         return super.onTouchEvent(event);
     }
 
-    public void gameEnded(char c) {
-        String msg = (c == 'T') ? "Game Ended: Tie!" : "Game Ended: " + c + " wins!";
-        if (c == 'X')
-            gameBoard.incrementXScore();
-        if (c == 'O')
-            gameBoard.incrementOScore();
+    public void gameEnded(char c) { //Calls score increment and displays end game dialog
+        String msg;
 
+        if (c == 'T')
+            msg = "Game Ended: Tie!";
+        else if (c == 'X') {
+            gameBoard.incrementXScore();
+            msg = "Game Ended: " + gameBoard.getPlayerXName() + " wins!";
+        }
+        else if (c == 'O') {
+            gameBoard.incrementOScore();
+            msg = "Game Ended: " + gameBoard.getPlayerOName() + " wins!";
+        }
+        else
+            msg = "[[ERROR: You shouldn\'t be seeing this!]]";
         new AlertDialog.Builder(getContext()).setTitle("Tic Tac Toe").
                 setMessage(msg).
                 setOnDismissListener(new DialogInterface.OnDismissListener() {
