@@ -63,78 +63,36 @@
                 android:id="@+id/button10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Icon1"
-                android:text="@string/IconsList.example" />
+                android:onClick="defaultIcon"
+                android:text="Default" />
 
             <Button
                 android:id="@+id/button22"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Icon1"
-                android:text="@string/IconsList.example" />
+                android:onClick="bakeryIcon"
+                android:text="Bakery" />
 
             <Button
                 android:id="@+id/button23"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Icon1"
-                android:text="@string/IconsList.example" />
+                android:onClick="christmasIcon"
+                android:text="Christams" />
 
             <Button
                 android:id="@+id/button24"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Icon1"
-                android:text="@string/IconsList.example" />
+                android:onClick="galaxyIcon"
+                android:text="Galaxy" />
 
             <Button
                 android:id="@+id/button25"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="Icon1"
-                android:text="@string/IconsList.example" />
-
-            <Button
-                android:id="@+id/button26"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="Icon1"
-                android:text="@string/IconsList.example" />
-
-            <Button
-                android:id="@+id/button27"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="Icon1"
-                android:text="@string/IconsList.example" />
-
-            <Button
-                android:id="@+id/button28"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="Icon1"
-                android:text="@string/IconsList.example" />
-
-            <Button
-                android:id="@+id/button29"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="Icon1"
-                android:text="@string/IconsList.example" />
-
-            <Button
-                android:id="@+id/button31"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="Icon1"
-                android:text="@string/IconsList.example" />
-
-            <Button
-                android:id="@+id/button32"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="Icon1"
-                android:text="@string/IconsList.example" />
+                android:onClick="halloweenIcon"
+                android:text="Halloween" />
 
         </LinearLayout>
     </ScrollView>

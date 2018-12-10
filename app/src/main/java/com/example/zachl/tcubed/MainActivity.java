@@ -1,28 +1,18 @@
 package com.example.zachl.tcubed;
 
 import android.app.Dialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.preference.PreferenceManager;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.Switch;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import static com.example.zachl.tcubed.R.id.board;
 
 //Game code tutorial: https://medium.com/@ssaurel/learn-to-create-a-tic-tac-toe-game-for-android-82c7bf2369de
 
@@ -31,9 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private static final String MUTE_KEY = "com.example.zachl.tcubed.muteKey";
     private static final String NO_RUMBLE_KEY = "com.example.zachl.tcubed.noRumbleKey";
-    private SharedPreferences mPreferences;
-    private int mIcons;
-    private int mBackgroundColor;
+    private SharedPreferences mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
     private static final String sharedPrefFile = "com.example.zachl.tcubed.sharedPrefs";
 
     @Override
@@ -43,11 +31,6 @@ public class MainActivity extends AppCompatActivity {
         myDialog = new Dialog(this);
 
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
-        mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
-        mIcons = 0;
-        mBackgroundColor = getColor(R.color.Background);
-
-
     }
 
     // Intent for Play Button
@@ -90,14 +73,12 @@ public class MainActivity extends AppCompatActivity {
             myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         Switch muteSwitch = myDialog.findViewById(R.id.muteSwitch);
-        if (muteSwitch == null)
-            Log.d(TAG, "muteSwitch = null");
         Switch noRumbleSwitch = myDialog.findViewById(R.id.noRumbleSwitch);
-        if (noRumbleSwitch == null)
-            Log.d(TAG, "noRumbleSwitch = null");
 
         muteSwitch.setChecked(mPreferences.getBoolean(MUTE_KEY, false));
         noRumbleSwitch.setChecked(mPreferences.getBoolean(NO_RUMBLE_KEY, false));
+
+        Log.d(TAG, "Starting muteSwitch listener");
 
         muteSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

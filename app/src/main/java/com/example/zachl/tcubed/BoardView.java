@@ -2,24 +2,19 @@ package com.example.zachl.tcubed;
 
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.res.Resources;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
-import android.os.Build;
-import android.os.VibrationEffect;
-import android.os.Vibrator;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-
-import static android.content.Context.VIBRATOR_SERVICE;
 
 public class BoardView extends View {
 
@@ -32,6 +27,10 @@ public class BoardView extends View {
     private GameBoard gameBoard;
     private Bitmap oBitmp;
     private Bitmap xBitmp;
+    private static final String sharedPrefFile = "com.example.zachl.tcubed.sharedPrefs";
+    private SharedPreferences mPreferences = getContext().getSharedPreferences(sharedPrefFile, Context.MODE_PRIVATE);
+    private static final String ICON_KEY = "com.example.zachl.tcubed.iconKey";
+    String[] fileArr  = getResources().getStringArray(R.array.icons_save);
     private final static String TAG = "BoardView";
 
     public BoardView(Context context) {
@@ -51,7 +50,7 @@ public class BoardView extends View {
 
 
         //Replace '0' with some kind of icon selection- 0 as default if no icons desired
-        int xID = 0;
+        int xID = fileArr[Integer.parseInt(mPreferences.getString(ICON_KEY, "0"))];   //Use pref value to access array to get file name to retrieve icon
         int oID = 0;
 
         try {

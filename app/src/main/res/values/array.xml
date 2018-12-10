@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //Preferences
+    <string-array name="Themes">
+        <item></item>
+    </string-array>
+
+    <string-array name="iconsO">
+        <item></item>
+        <item>donut</item>
+        <item>wreath</item>
+        <item>circle_icon</item>
+        <item>pumpkin_icon</item>
+    </string-array>
+
+    <string-array name="iconsX">
+        <item></item>
+        <item>crossed_donuts</item>
+        <item>crossed_candy_canes</item>
+        <item>star_icon</item>
+        <item>candy_icon</item>
+    </string-array>
+
+    <string-array name="icons_names">
+        <item>Default</item>
+        <item>Bakery</item>
+        <item>Christmas</item>
+        <item>Galaxy</item>
+        <item>Halloween</item>
+    </string-array>
+
+    <integer-array name="icon_index">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </integer-array>
+</resources>

@@ -75,51 +75,6 @@
     <string name="Misc.UpNavArrow.contentDesc">Small arrow to go up to previous menu</string>
     <string name="Misc.shortPlacehold">PH</string>
 
-    //Preferences
-    <string-array name="Themes">
-        <item></item>
-    </string-array>
-
-    <string-array name="icons_save">
-        <item>
-            <string-array name="default">
-                <item></item>
-                <item></item>
-            </string-array>
-        </item>
-        <item>
-            <string-array name="bakery">
-                <item>crossed_donuts</item>
-                <item>donut</item>
-            </string-array>
-        </item>
-        <item>
-            <string-array name="halloween">
-                <item>candy_icon</item>
-                <item>pumpkin_icon</item>
-            </string-array>
-        </item>
-        <item>
-            <string-array name="christmas">
-                <item>crossed_candy_canes</item>
-                <item>wreath</item>
-            </string-array>
-        </item>
-        <item>
-            <string-array name="galaxy">
-                <item>star_icon</item>
-                <item>circle_icon</item>
-            </string-array>
-        </item>
-    </string-array>
-
-    <string-array name="icons_names">
-        <item>Bakery</item>
-        <item>Halloween</item>
-        <item>Christmas</item>
-        <item>Galaxy</item>
-    </string-array>
-
     <!-- TODO: Remove or change this placeholder text -->
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
