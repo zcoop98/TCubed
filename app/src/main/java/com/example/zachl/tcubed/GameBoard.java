@@ -3,9 +3,11 @@ package com.example.zachl.tcubed;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -17,6 +19,9 @@ public class GameBoard extends AppCompatActivity {
     public static final String PVPSWITCH = "com.zachl.tcubed.PVPSWITCH";
     public static final String XOSWITCH = "com.zachl.tcubed.XOSWITCH";
     private static final String TAG = "GameBoard";
+    private static final String sharedPrefFile = "com.example.zachl.tcubed.sharedPrefs";
+    private SharedPreferences mPreferences;
+    private static final String BACKGROUND_KEY = "com.example.zachl.tcubed.backgroundKey";
     private GameEngine game_engine;
     private BoardView board_view;
     private TextView player1Score;
@@ -31,6 +36,8 @@ public class GameBoard extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_board);
+
+        mPreferences = getApplicationContext().getSharedPreferences(sharedPrefFile, Context.MODE_PRIVATE);
     }
 
     protected void onStart()
@@ -39,7 +46,19 @@ public class GameBoard extends AppCompatActivity {
         Log.d(TAG, "onStart() Firing");
         super.onStart();
 
-        Log.d(TAG, "Constructing BoardView");
+        int colorCode = mPreferences.getInt(BACKGROUND_KEY, 0);
+
+        Log.d(TAG, "Retrieved color code: " + colorCode);
+
+        int r = (byte) colorCode & (byte) 0xFF0000;
+        int g = (byte) colorCode & (byte) 0x00FF00;
+        int b = (byte) colorCode & (byte) 0x0000FF;
+
+        Log.d(TAG, "Extracted RGB vals- R: " + r + " G: " + g + " B: " + b);
+
+        //findViewById(R.id.boardLayout).setBackgroundColor(Color.rgb(r, g, b));
+
+        Log.d(TAG, "Set background color pref\nConstructing BoardView");
         board_view = findViewById(R.id.board);
 
         Log.d(TAG, "Constructing GameEngine");
